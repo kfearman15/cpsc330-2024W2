@@ -3198,7 +3198,7 @@ In decision tree models, when we are working with only two features, the decisio
 <h5>Decision boundary for <code class="docutils literal notranslate"><span class="pre">max_depth=5</span></code><a class="headerlink" href="#decision-boundary-for-max-depth-5" title="Link to this heading">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_subset</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">plot_tree_decision_boundary_and_tree</span><span class="p">(</span>
     <span class="n">model</span><span class="p">,</span> <span class="n">X_subset</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x_label</span><span class="o">=</span><span class="s2">&quot;lab4&quot;</span><span class="p">,</span> <span class="n">y_label</span><span class="o">=</span><span class="s2">&quot;quiz1&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span>
@@ -3207,7 +3207,7 @@ In decision tree models, when we are working with only two features, the decisio
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0a2c189e78ff1de49254dc9e86fa4923f6a641b0902ec65c674b57f437ca9703.png" src="../../_images/0a2c189e78ff1de49254dc9e86fa4923f6a641b0902ec65c674b57f437ca9703.png" />
+<img alt="../../_images/7af195cdecad84f4a6581da6161134969ecb40cf7e4ee32124b694aed1090163.png" src="../../_images/7af195cdecad84f4a6581da6161134969ecb40cf7e4ee32124b694aed1090163.png" />
 </div>
 </div>
 <p>The decision boundary, i.e., the model gets even more complicated with <code class="docutils literal notranslate"><span class="pre">max_depth=5</span></code>.</p>
