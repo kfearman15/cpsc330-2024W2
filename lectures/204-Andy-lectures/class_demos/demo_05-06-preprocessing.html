@@ -997,36 +997,36 @@ Name: count, dtype: int64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.000777</td>
-      <td>0.000485</td>
+      <td>0.000889</td>
+      <td>0.000729</td>
       <td>0.516556</td>
       <td>0.514950</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.000468</td>
-      <td>0.000304</td>
+      <td>0.000489</td>
+      <td>0.000308</td>
       <td>0.516556</td>
       <td>0.514950</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.000458</td>
-      <td>0.000303</td>
+      <td>0.000452</td>
+      <td>0.000314</td>
       <td>0.516556</td>
       <td>0.514950</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.000442</td>
-      <td>0.000294</td>
+      <td>0.000450</td>
+      <td>0.000312</td>
       <td>0.513333</td>
       <td>0.515755</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.000444</td>
-      <td>0.000287</td>
+      <td>0.000428</td>
+      <td>0.000283</td>
       <td>0.513333</td>
       <td>0.515755</td>
     </tr>
@@ -1053,7 +1053,7 @@ Name: count, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_10188/373623580.py</span> in <span class="ni">?</span><span class="nt">()</span>
+<span class="nn">/tmp/ipykernel_6214/373623580.py</span> in <span class="ni">?</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Preprocessing and pipeline</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -1404,7 +1404,7 @@ Name: count, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">X_train_num</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="n">numeric_feats</span><span class="p">]</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">X_test_num</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[</span><span class="n">numeric_feats</span><span class="p">]</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_num</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -2175,16 +2175,10 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <li><p>This worked but are we doing anything wrong here?</p></li>
 <li><p>What’s the problem with calling <code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> with preprocessed data?</p></li>
 </ul>
+<p>We will continue with this demo in the next lecture.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_improper_processing</span><span class="p">(</span><span class="s2">&quot;kNN&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_proper_processing</span><span class="p">(</span><span class="s2">&quot;knn&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2221,7 +2215,6 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 <p><br><br><br><br></p>
-<p>We will continue with this demo in the next lecture.</p>
 </section>
 </section>
 <section id="categorical-features">
@@ -2268,7 +2261,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># One-hot encoding of categorical features </span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
 <span class="c1"># Create class object</span>
-<span class="n">ohe</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ohe</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">()</span>
 
 <span class="c1"># fit OneHotEncoder</span>
 
@@ -2344,13 +2337,6 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>Let’s examine the scores using ordinal features.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">noise_ordering</span> <span class="o">=</span> <span class="p">[]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;noise_level&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2358,10 +2344,14 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pipe_ordinal_knn</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
-    <span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="n">noise_ordering</span><span class="p">]),</span>
-    <span class="n">KNeighborsClassifier</span><span class="p">()</span>
-<span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">noise_cats</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pipe_ordinal_knn</span> <span class="o">=</span> <span class="n">make_pipeline</span>
 </pre></div>
 </div>
 </div>
@@ -2384,14 +2374,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>There are missing values. So we need an imputer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OrdinalEncoder</span>
-<span class="n">noise_ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;no music&#39;</span><span class="p">,</span> <span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;crazy loud&#39;</span><span class="p">]</span>
-
-<span class="n">ordinal_transformer</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
-    <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;most_frequent&quot;</span><span class="p">),</span>
-    <span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="n">noise_ordering</span><span class="p">]),</span>
-    <span class="n">KNeighborsClassifier</span><span class="p">()</span>
-<span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ordinal_transformer</span> <span class="o">=</span> <span class="n">make_pipeline</span>
 </pre></div>
 </div>
 </div>
