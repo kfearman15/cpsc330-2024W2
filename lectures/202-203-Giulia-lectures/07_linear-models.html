@@ -63,7 +63,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/201-Lecuyer-lectures/07_linear-models';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/202-203-Giulia-lectures/07_linear-models';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -283,7 +283,7 @@
       
       
       
-      <li><a href="../../_sources/lectures/201-Lecuyer-lectures/07_linear-models.ipynb" target="_blank"
+      <li><a href="../../_sources/lectures/202-203-Giulia-lectures/07_linear-models.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,8 +369,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#announcements">Announcements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports-and-lo">Imports, and LO</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports-announcements-and-lo">Imports, Announcements, and LO</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
 </ul>
 </li>
@@ -405,7 +404,6 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-scaling">Importance of scaling</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">❓❓ Questions for you</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression-video">Logistic regression [video]</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression-intuition">Logistic regression intuition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-example">Motivating example</a><ul class="nav section-nav flex-column">
@@ -436,8 +434,9 @@
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iclicker-exercise-7-2">(iClicker) Exercise 7.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iclicker-exercise-7-3">(iClicker) Exercise 7.3</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-svm">Linear SVM</a></li>
 </ul>
 </li>
@@ -463,15 +462,8 @@
 <section class="tex2jax_ignore mathjax_ignore" id="lecture-7-linear-models">
 <h1>Lecture 7: Linear Models<a class="headerlink" href="#lecture-7-linear-models" title="Link to this heading">#</a></h1>
 <p>UBC 2024-25</p>
-<section id="announcements">
-<h2>Announcements<a class="headerlink" href="#announcements" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>HW3 due <a class="reference external" href="https://github.com/UBC-CS/cpsc330-2024W2/blob/main/README.md#deliverable-due-dates-tentative">next Monday (Feb 03, 11:59 pm)</a>.</p></li>
-<li><p>Midterm 1 approaching</p></li>
-</ul>
-</section>
-<section id="imports-and-lo">
-<h2>Imports, and LO<a class="headerlink" href="#imports-and-lo" title="Link to this heading">#</a></h2>
+<section id="imports-announcements-and-lo">
+<h2>Imports, Announcements, and LO<a class="headerlink" href="#imports-announcements-and-lo" title="Link to this heading">#</a></h2>
 <section id="imports">
 <h3>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -701,7 +693,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.2590575478171884)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.2590575478171857
 </pre></div>
 </div>
 </div>
@@ -1078,36 +1070,36 @@ It can be downloaded/loaded using the
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.002481</td>
-      <td>0.000416</td>
+      <td>0.003165</td>
+      <td>0.000590</td>
       <td>0.599492</td>
       <td>0.608050</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.002121</td>
-      <td>0.000397</td>
+      <td>0.002137</td>
+      <td>0.000434</td>
       <td>0.613507</td>
       <td>0.604619</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.001762</td>
-      <td>0.000353</td>
+      <td>0.002292</td>
+      <td>0.003652</td>
       <td>0.598100</td>
       <td>0.608468</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.001740</td>
-      <td>0.000351</td>
+      <td>0.004665</td>
+      <td>0.001283</td>
       <td>0.612621</td>
       <td>0.604797</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.002114</td>
-      <td>0.000402</td>
+      <td>0.007074</td>
+      <td>0.002477</td>
       <td>0.601790</td>
       <td>0.606902</td>
     </tr>
@@ -1334,7 +1326,7 @@ It can be downloaded/loaded using the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.0667579112160865)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0667579112160865
 </pre></div>
 </div>
 </div>
@@ -1347,7 +1339,7 @@ It can be downloaded/loaded using the
 <h2>❓❓ Questions for you<a class="headerlink" href="#questions-for-you" title="Link to this heading">#</a></h2>
 <section id="iclicker-exercise-7-1">
 <h3>(iClicker) Exercise 7.1<a class="headerlink" href="#iclicker-exercise-7-1" title="Link to this heading">#</a></h3>
-<p><strong>iClicker cloud join link: https://join.iclicker.com/FUYI</strong></p>
+<p><strong>iClicker cloud join link: https://join.iclicker.com/RITY</strong></p>
 <p><strong>Select all of the following statements which are TRUE.</strong></p>
 <ul class="simple">
 <li><p>(A) Increasing the hyperparameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code> of <code class="docutils literal notranslate"><span class="pre">Ridge</span></code> is likely to decrease model complexity.</p></li>
@@ -1550,15 +1542,8 @@ It can be downloaded/loaded using the
 <p>Take these coefficients with a grain of salt. They might not always match your intuitions. Also, they do not tell us about how the world works. They only tell us about how the prediction of your model works.</p>
 </div>
 <p><br><br></p>
-</section>
-</section>
-<section id="id1">
-<h2>❓❓ Questions for you<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Discuss the importance of scaling when interpreting linear regression coefficients.</p></li>
-<li><p>What might be the meaning of complex vs simpler model in case of linear regression?</p></li>
-</ul>
 <p><br><br><br><br></p>
+</section>
 </section>
 <section id="logistic-regression-video">
 <h2>Logistic regression [<a class="reference external" href="https://youtu.be/56L5z_t22qE">video</a>]<a class="headerlink" href="#logistic-regression-video" title="Link to this heading">#</a></h2>
@@ -1637,8 +1622,8 @@ It got a bit <b>boring</b> at times but the direction was <b>excellent</b> and t
 <p>In our case, for values for the coefficient of <em>boring</em> &lt; -3.36, the prediction would be negative.</p>
 <p>A linear model learns these coefficients or weights from the training data!</p>
 <p>So a linear classifier is a linear function of the input <code class="docutils literal notranslate"><span class="pre">X</span></code>, followed by a threshold.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af2de087-2f1c-4fda-bba4-0f210186785b">
-<span class="eqno">()<a class="headerlink" href="#equation-af2de087-2f1c-4fda-bba4-0f210186785b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-33a79cdb-6efc-4ef8-a275-f2ed8ca93b68">
+<span class="eqno">()<a class="headerlink" href="#equation-33a79cdb-6efc-4ef8-a275-f2ed8ca93b68" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \begin{split}
 z =&amp; w_1x_1 + \dots + w_dx_d + b\\
 =&amp; w^Tx + b
@@ -1771,36 +1756,36 @@ z =&amp; w_1x_1 + \dots + w_dx_d + b\\
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.000240</td>
-      <td>0.000412</td>
+      <td>0.001084</td>
+      <td>0.000610</td>
       <td>0.588235</td>
       <td>0.601504</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.000153</td>
-      <td>0.000196</td>
+      <td>0.000161</td>
+      <td>0.000207</td>
       <td>0.588235</td>
       <td>0.601504</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.000116</td>
-      <td>0.000166</td>
+      <td>0.000134</td>
+      <td>0.000197</td>
       <td>0.606061</td>
       <td>0.597015</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.000102</td>
-      <td>0.000142</td>
+      <td>0.000124</td>
+      <td>0.000170</td>
       <td>0.606061</td>
       <td>0.597015</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.000101</td>
-      <td>0.000140</td>
+      <td>0.000124</td>
+      <td>0.000165</td>
       <td>0.606061</td>
       <td>0.597015</td>
     </tr>
@@ -1847,36 +1832,36 @@ z =&amp; w_1x_1 + \dots + w_dx_d + b\\
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.004438</td>
-      <td>0.000278</td>
+      <td>0.006438</td>
+      <td>0.000419</td>
       <td>0.852941</td>
       <td>0.827068</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.003103</td>
-      <td>0.000280</td>
+      <td>0.002974</td>
+      <td>0.000386</td>
       <td>0.823529</td>
       <td>0.827068</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.002703</td>
-      <td>0.000239</td>
+      <td>0.002618</td>
+      <td>0.000384</td>
       <td>0.696970</td>
       <td>0.858209</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.003026</td>
-      <td>0.000318</td>
+      <td>0.002274</td>
+      <td>0.000336</td>
       <td>0.787879</td>
       <td>0.843284</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.002761</td>
-      <td>0.000256</td>
+      <td>0.003479</td>
+      <td>0.000415</td>
       <td>0.939394</td>
       <td>0.805970</td>
     </tr>
@@ -2868,11 +2853,11 @@ $<span class="math notranslate nohighlight">\(\frac{1}{1+e^{-x}}\)</span>$</p></
 </section>
 </section>
 </section>
-<section id="id2">
-<h2>❓❓ Questions for you<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h2>❓❓ Questions for you<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <section id="iclicker-exercise-7-2">
 <h3>(iClicker) Exercise 7.2<a class="headerlink" href="#iclicker-exercise-7-2" title="Link to this heading">#</a></h3>
-<p><strong>iClicker cloud join link: https://join.iclicker.com/FUYI</strong></p>
+<p><strong>iClicker cloud join link: https://join.iclicker.com/RITY</strong></p>
 <p><strong>Select all of the following statements which are TRUE.</strong></p>
 <ul class="simple">
 <li><p>(A) Increasing logistic regression’s <code class="docutils literal notranslate"><span class="pre">C</span></code> hyperparameter increases model complexity.</p></li>
@@ -2880,7 +2865,20 @@ $<span class="math notranslate nohighlight">\(\frac{1}{1+e^{-x}}\)</span>$</p></
 <li><p>(C) For linear classifier trained on <span class="math notranslate nohighlight">\(d\)</span> features, the decision boundary is a <span class="math notranslate nohighlight">\(d-1\)</span>-dimensional hyperparlane.</p></li>
 <li><p>(D) A linear model is likely to be uncertain about the data points close to the decision boundary.</p></li>
 </ul>
-<p><br><br><br><br></p>
+</section>
+<section id="iclicker-exercise-7-3">
+<h3>(iClicker) Exercise 7.3<a class="headerlink" href="#iclicker-exercise-7-3" title="Link to this heading">#</a></h3>
+<p><strong>iClicker cloud join link: https://join.iclicker.com/RITY</strong></p>
+<p><strong>Select all of the following statements which are TRUE.</strong></p>
+<ul class="simple">
+<li><p>(A) More overlapping in the ground truth feature for the two classes results in a flatter curve</p></li>
+<li><p>(B) If the curve is flatter, the weight (coefficient) associated to the feature is larger</p></li>
+<li><p>(C) P(positive) + P(negative) = 1</p></li>
+<li><p>(D) The magnitude of coefficients in logistic regression can be interpreted even if the features are not scaled</p></li>
+</ul>
+<div>
+<img src="../img/logRegStudyHours.png" width="500"/>
+</div><p><br><br><br><br></p>
 </section>
 <section id="linear-svm">
 <h3>Linear SVM<a class="headerlink" href="#linear-svm" title="Link to this heading">#</a></h3>
@@ -2992,6 +2990,7 @@ Model intercept: [10.886759]
 <li><p>if <span class="math notranslate nohighlight">\(w_j &gt; 0\)</span> then increasing <span class="math notranslate nohighlight">\(x_{ij}\)</span> moves us toward predicting <span class="math notranslate nohighlight">\(+1\)</span></p></li>
 <li><p>if <span class="math notranslate nohighlight">\(w_j &lt; 0\)</span> then increasing <span class="math notranslate nohighlight">\(x_{ij}\)</span> moves us toward prediction <span class="math notranslate nohighlight">\(-1\)</span></p></li>
 <li><p>if <span class="math notranslate nohighlight">\(w_j == 0\)</span> then the feature is not used in making a prediction</p></li>
+<li><p>Scaling is necessary to compare coefficients</p></li>
 </ul>
 </section>
 <section id="strengths-of-linear-models">
@@ -3060,16 +3059,16 @@ Model intercept: [10.886759]
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "conda-env-cpsc330-py"
+            mode: "cpsc330"
         },
         kernelOptions: {
-            name: "conda-env-cpsc330-py",
-            path: "./lectures/201-Lecuyer-lectures"
+            name: "cpsc330",
+            path: "./lectures/202-203-Giulia-lectures"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'conda-env-cpsc330-py'</script>
+    <script>kernelName = 'cpsc330'</script>
 
                 </article>
               
@@ -3098,8 +3097,7 @@ Model intercept: [10.886759]
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#announcements">Announcements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports-and-lo">Imports, and LO</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports-announcements-and-lo">Imports, Announcements, and LO</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
 </ul>
 </li>
@@ -3134,7 +3132,6 @@ Model intercept: [10.886759]
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-scaling">Importance of scaling</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">❓❓ Questions for you</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression-video">Logistic regression [video]</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression-intuition">Logistic regression intuition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-example">Motivating example</a><ul class="nav section-nav flex-column">
@@ -3165,8 +3162,9 @@ Model intercept: [10.886759]
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iclicker-exercise-7-2">(iClicker) Exercise 7.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iclicker-exercise-7-3">(iClicker) Exercise 7.3</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-svm">Linear SVM</a></li>
 </ul>
 </li>
