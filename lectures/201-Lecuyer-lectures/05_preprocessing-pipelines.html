@@ -3594,6 +3594,60 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </table>
 </div></div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dummy</th>
+      <th>imp + scaling + knn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>fit_time</th>
+      <td>0.001 (+/- 0.000)</td>
+      <td>0.013 (+/- 0.001)</td>
+    </tr>
+    <tr>
+      <th>score_time</th>
+      <td>0.000 (+/- 0.000)</td>
+      <td>0.072 (+/- 0.008)</td>
+    </tr>
+    <tr>
+      <th>test_score</th>
+      <td>-0.055 (+/- 0.012)</td>
+      <td>0.693 (+/- 0.014)</td>
+    </tr>
+    <tr>
+      <th>train_score</th>
+      <td>-0.055 (+/- 0.001)</td>
+      <td>0.797 (+/- 0.015)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 <p>Using a <code class="docutils literal notranslate"><span class="pre">Pipeline</span></code> takes care of applying the <code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> on the train portion and only <code class="docutils literal notranslate"><span class="pre">transform</span></code> on the validation portion in each fold.</p>
 <p><br><br><br><br></p>
 </section>
