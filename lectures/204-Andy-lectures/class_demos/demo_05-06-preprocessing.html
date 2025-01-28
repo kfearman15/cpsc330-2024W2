@@ -997,36 +997,36 @@ Name: count, dtype: int64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.000889</td>
-      <td>0.000729</td>
+      <td>0.000789</td>
+      <td>0.000415</td>
       <td>0.516556</td>
       <td>0.514950</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.000489</td>
-      <td>0.000308</td>
+      <td>0.000507</td>
+      <td>0.000332</td>
       <td>0.516556</td>
       <td>0.514950</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.000452</td>
-      <td>0.000314</td>
+      <td>0.000558</td>
+      <td>0.000312</td>
       <td>0.516556</td>
       <td>0.514950</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.000450</td>
-      <td>0.000312</td>
+      <td>0.000432</td>
+      <td>0.000556</td>
       <td>0.513333</td>
       <td>0.515755</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.000428</td>
-      <td>0.000283</td>
+      <td>0.000450</td>
+      <td>0.000339</td>
       <td>0.513333</td>
       <td>0.515755</td>
     </tr>
@@ -1053,7 +1053,7 @@ Name: count, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_6214/373623580.py</span> in <span class="ni">?</span><span class="nt">()</span>
+<span class="nn">/tmp/ipykernel_22611/373623580.py</span> in <span class="ni">?</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Preprocessing and pipeline</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -2182,6 +2182,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/a79f9e1bfc3f965ae60181278ed097192f09a91f2c38cccf27b30abf110067f5.png" src="../../../_images/a79f9e1bfc3f965ae60181278ed097192f09a91f2c38cccf27b30abf110067f5.png" />
+</div>
 </div>
 <p><br><br><br><br></p>
 <section id="how-would-you-do-it-properly-enter-sklearn-pipelines">
@@ -2189,7 +2192,11 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a pipeline </span>
-<span class="n">pipe_knn</span> <span class="o">=</span> 
+<span class="n">pipe_knn</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;median&#39;</span><span class="p">),</span> 
+    <span class="n">StandardScaler</span><span class="p">(),</span>
+    <span class="n">KNeighborsClassifier</span><span class="p">()</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2197,6 +2204,11 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">pipe_knn</span><span class="p">,</span> <span class="n">X_train_num</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.47810154525386317)
 </pre></div>
 </div>
 </div>
@@ -2213,6 +2225,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/44e6009f542f650d5297710a434fcb4c44df752a802bf19bff1f219e2aa04266.png" src="../../../_images/44e6009f542f650d5297710a434fcb4c44df752a802bf19bff1f219e2aa04266.png" />
+</div>
 </div>
 <p><br><br><br><br></p>
 </section>
@@ -2226,6 +2241,21 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>food_type
+Other                189
+Canadian/American    131
+Chinese              102
+Indian                36
+Italian               32
+Fusion                21
+Thai                  20
+Mexican               17
+Quebecois              1
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2233,6 +2263,77 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>food_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>80</th>
+      <td>Chinese</td>
+    </tr>
+    <tr>
+      <th>934</th>
+      <td>Canadian/American</td>
+    </tr>
+    <tr>
+      <th>911</th>
+      <td>Canadian/American</td>
+    </tr>
+    <tr>
+      <th>459</th>
+      <td>Quebecois</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>Indian</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>Chinese</td>
+    </tr>
+    <tr>
+      <th>333</th>
+      <td>Other</td>
+    </tr>
+    <tr>
+      <th>393</th>
+      <td>Canadian/American</td>
+    </tr>
+    <tr>
+      <th>376</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>525</th>
+      <td>Chinese</td>
+    </tr>
+  </tbody>
+</table>
+<p>753 rows × 1 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2240,10 +2341,34 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>north_america
+Yes                    415
+No                     330
+Don&#39;t want to share      8
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;food_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>food_type
+Other                189
+Canadian/American    131
+Chinese              102
+Indian                36
+Italian               32
+Fusion                21
+Thai                  20
+Mexican               17
+Quebecois              1
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -2261,13 +2386,14 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># One-hot encoding of categorical features </span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
 <span class="c1"># Create class object</span>
-<span class="n">ohe</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">()</span>
+<span class="n">ohe</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># fit OneHotEncoder</span>
+<span class="n">ohe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_cat</span><span class="p">)</span>
 
 <span class="c1"># Transform</span>
-<span class="n">X_train_cat_ohe</span>  <span class="o">=</span> 
-<span class="n">X_test_cat_ohe</span>  <span class="o">=</span>  
+<span class="n">X_train_cat_ohe</span>  <span class="o">=</span> <span class="n">ohe</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train_cat</span><span class="p">)</span>
+<span class="n">X_test_cat_ohe</span>  <span class="o">=</span>  <span class="n">ohe</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test_cat</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2275,6 +2401,17 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train_cat_ohe</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0., 1., 0., ..., 0., 0., 0.],
+       [1., 0., 0., ..., 0., 0., 0.],
+       [1., 0., 0., ..., 0., 0., 0.],
+       ...,
+       [1., 0., 0., ..., 0., 0., 0.],
+       [0., 0., 0., ..., 0., 0., 1.],
+       [0., 1., 0., ..., 0., 0., 0.]], shape=(753, 10))
 </pre></div>
 </div>
 </div>
@@ -2286,9 +2423,22 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the OHE feature names </span>
-
 <span class="n">ohe_feats</span> <span class="o">=</span> <span class="n">ohe</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">ohe_feats</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;food_type_Canadian/American&#39;,
+ &#39;food_type_Chinese&#39;,
+ &#39;food_type_Fusion&#39;,
+ &#39;food_type_Indian&#39;,
+ &#39;food_type_Italian&#39;,
+ &#39;food_type_Mexican&#39;,
+ &#39;food_type_Other&#39;,
+ &#39;food_type_Quebecois&#39;,
+ &#39;food_type_Thai&#39;,
+ &#39;food_type_nan&#39;]
 </pre></div>
 </div>
 </div>
@@ -2299,10 +2449,194 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>food_type_Canadian/American</th>
+      <th>food_type_Chinese</th>
+      <th>food_type_Fusion</th>
+      <th>food_type_Indian</th>
+      <th>food_type_Italian</th>
+      <th>food_type_Mexican</th>
+      <th>food_type_Other</th>
+      <th>food_type_Quebecois</th>
+      <th>food_type_Thai</th>
+      <th>food_type_nan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>748</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>749</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>750</th>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>751</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>752</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>753 rows × 10 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">X_train_cat_ohe</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">X_train_cat_ohe</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.575046357615894)
 </pre></div>
 </div>
 </div>
@@ -2326,7 +2660,12 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">pipe_ohe_knn</span><span class="p">,</span> <span class="n">X_train_cat</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">pipe_ohe_knn</span><span class="p">,</span> <span class="n">X_train_cat</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.575046357615894)
 </pre></div>
 </div>
 </div>
@@ -2341,6 +2680,29 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>noise_level
+medium        232
+low           186
+high           75
+no music       37
+crazy loud     18
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;noise_level&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(205)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2348,17 +2710,31 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pipe_ordinal_knn</span> <span class="o">=</span> <span class="n">make_pipeline</span>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;no music&#39;, &#39;low&#39;, &#39;medium&#39;, &#39;high&#39;, &#39;crazy loud&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cross_val_score(pipe_ordinal_knn, X_train[[&#39;noise_level&#39;]], y_train)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pipe_ordinal_knn</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;most_frequent&quot;</span><span class="p">),</span>
+    <span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="n">noise_cats</span><span class="p">]),</span>
+    <span class="n">KNeighborsClassifier</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">pipe_ordinal_knn</span><span class="p">,</span> <span class="n">X_train</span><span class="p">[[</span><span class="s1">&#39;noise_level&#39;</span><span class="p">]],</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.5471258278145695)
 </pre></div>
 </div>
 </div>
@@ -2374,7 +2750,11 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>There are missing values. So we need an imputer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ordinal_transformer</span> <span class="o">=</span> <span class="n">make_pipeline</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ordinal_transformer</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;most_frequent&quot;</span><span class="p">),</span>
+    <span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="n">noise_cats</span><span class="p">]),</span>
+    <span class="n">KNeighborsClassifier</span><span class="p">()</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2382,6 +2762,11 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">ordinal_transformer</span><span class="p">,</span> <span class="n">X_train</span><span class="p">[[</span><span class="s1">&#39;noise_level&#39;</span><span class="p">]],</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.54966887, 0.52980132, 0.57615894, 0.50666667, 0.57333333])
 </pre></div>
 </div>
 </div>
@@ -2400,6 +2785,34 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">make_column_transformer</span>
+
+<span class="n">numeric_transformer</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">),</span> 
+    <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">binary_transformer</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;most_frequent&quot;</span><span class="p">),</span> 
+    <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="s2">&quot;if_binary&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">ordinal_transformer</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;most_frequent&quot;</span><span class="p">),</span>
+    <span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="n">noise_cats</span><span class="p">])</span>
+<span class="p">)</span>
+
+<span class="n">categorical_transformer</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;most_frequent&quot;</span><span class="p">),</span>
+    <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">sparse_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">preprocessor</span> <span class="o">=</span> <span class="n">make_column_transformer</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">numeric_transformer</span><span class="p">,</span> <span class="n">numeric_feats</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">binary_transformer</span><span class="p">,</span> <span class="n">binary_feats</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">ordinal_transformer</span><span class="p">,</span> <span class="n">ordinal_feats</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">categorical_transformer</span><span class="p">,</span> <span class="n">categorical_feats</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;drop&quot;</span><span class="p">,</span> <span class="n">drop_feats</span><span class="p">)</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2407,7 +2820,24 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>How does the transformed data look like?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drop_feats</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;comments&#39;, &#39;north_america&#39;, &#39;restaurant_name&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">categorical_feats</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;food_type&#39;]
 </pre></div>
 </div>
 </div>
@@ -2418,6 +2848,18 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(753, 10)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">transformed</span> <span class="o">=</span> <span class="n">preprocessor</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2425,6 +2867,483 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-3 {
+  /* Definition of color scheme common for light and dark mode */
+  --sklearn-color-text: #000;
+  --sklearn-color-text-muted: #666;
+  --sklearn-color-line: gray;
+  /* Definition of color scheme for unfitted estimators */
+  --sklearn-color-unfitted-level-0: #fff5e6;
+  --sklearn-color-unfitted-level-1: #f6e4d2;
+  --sklearn-color-unfitted-level-2: #ffe0b3;
+  --sklearn-color-unfitted-level-3: chocolate;
+  /* Definition of color scheme for fitted estimators */
+  --sklearn-color-fitted-level-0: #f0f8ff;
+  --sklearn-color-fitted-level-1: #d4ebff;
+  --sklearn-color-fitted-level-2: #b3dbfd;
+  --sklearn-color-fitted-level-3: cornflowerblue;
+
+  /* Specific color for light theme */
+  --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, white)));
+  --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-icon: #696969;
+
+  @media (prefers-color-scheme: dark) {
+    /* Redefinition of color scheme for dark theme */
+    --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, #111)));
+    --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-icon: #878787;
+  }
+}
+
+#sk-container-id-3 {
+  color: var(--sklearn-color-text);
+}
+
+#sk-container-id-3 pre {
+  padding: 0;
+}
+
+#sk-container-id-3 input.sk-hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#sk-container-id-3 div.sk-dashed-wrapped {
+  border: 1px dashed var(--sklearn-color-line);
+  margin: 0 0.4em 0.5em 0.4em;
+  box-sizing: border-box;
+  padding-bottom: 0.4em;
+  background-color: var(--sklearn-color-background);
+}
+
+#sk-container-id-3 div.sk-container {
+  /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
+     but bootstrap.min.css set `[hidden] { display: none !important; }`
+     so we also need the `!important` here to be able to override the
+     default hidden behavior on the sphinx rendered scikit-learn.org.
+     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
+  display: inline-block !important;
+  position: relative;
+}
+
+#sk-container-id-3 div.sk-text-repr-fallback {
+  display: none;
+}
+
+div.sk-parallel-item,
+div.sk-serial,
+div.sk-item {
+  /* draw centered vertical line to link estimators */
+  background-image: linear-gradient(var(--sklearn-color-text-on-default-background), var(--sklearn-color-text-on-default-background));
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Parallel-specific style estimator block */
+
+#sk-container-id-3 div.sk-parallel-item::after {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
+  flex-grow: 1;
+}
+
+#sk-container-id-3 div.sk-parallel {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: var(--sklearn-color-background);
+  position: relative;
+}
+
+#sk-container-id-3 div.sk-parallel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#sk-container-id-3 div.sk-parallel-item:first-child::after {
+  align-self: flex-end;
+  width: 50%;
+}
+
+#sk-container-id-3 div.sk-parallel-item:last-child::after {
+  align-self: flex-start;
+  width: 50%;
+}
+
+#sk-container-id-3 div.sk-parallel-item:only-child::after {
+  width: 0;
+}
+
+/* Serial-specific style estimator block */
+
+#sk-container-id-3 div.sk-serial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sklearn-color-background);
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+
+/* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
+clickable and can be expanded/collapsed.
+- Pipeline and ColumnTransformer use this feature and define the default style
+- Estimators will overwrite some part of the style using the `sk-estimator` class
+*/
+
+/* Pipeline and ColumnTransformer style (default) */
+
+#sk-container-id-3 div.sk-toggleable {
+  /* Default theme specific background. It is overwritten whether we have a
+  specific estimator or a Pipeline/ColumnTransformer */
+  background-color: var(--sklearn-color-background);
+}
+
+/* Toggleable label */
+#sk-container-id-3 label.sk-toggleable__label {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+#sk-container-id-3 label.sk-toggleable__label .caption {
+  font-size: 0.6rem;
+  font-weight: lighter;
+  color: var(--sklearn-color-text-muted);
+}
+
+#sk-container-id-3 label.sk-toggleable__label-arrow:before {
+  /* Arrow on the left of the label */
+  content: "▸";
+  float: left;
+  margin-right: 0.25em;
+  color: var(--sklearn-color-icon);
+}
+
+#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {
+  color: var(--sklearn-color-text);
+}
+
+/* Toggleable content - dropdown */
+
+#sk-container-id-3 div.sk-toggleable__content {
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
+  text-align: left;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-3 div.sk-toggleable__content.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-3 div.sk-toggleable__content pre {
+  margin: 0.2em;
+  border-radius: 0.25em;
+  color: var(--sklearn-color-text);
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-3 div.sk-toggleable__content.fitted pre {
+  /* unfitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+  /* Expand drop-down */
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+  content: "▾";
+}
+
+/* Pipeline/ColumnTransformer-specific style */
+
+#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-3 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator-specific style */
+
+/* Colorize estimator box */
+#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-3 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+#sk-container-id-3 div.sk-label label.sk-toggleable__label,
+#sk-container-id-3 div.sk-label label {
+  /* The background is the default theme color */
+  color: var(--sklearn-color-text-on-default-background);
+}
+
+/* On hover, darken the color of the background */
+#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+/* Label box, darken color on hover, fitted */
+#sk-container-id-3 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator label */
+
+#sk-container-id-3 div.sk-label label {
+  font-family: monospace;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 1.2em;
+}
+
+#sk-container-id-3 div.sk-label-container {
+  text-align: center;
+}
+
+/* Estimator-specific */
+#sk-container-id-3 div.sk-estimator {
+  font-family: monospace;
+  border: 1px dotted var(--sklearn-color-border-box);
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-3 div.sk-estimator.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+/* on hover */
+#sk-container-id-3 div.sk-estimator:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-3 div.sk-estimator.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Specification for estimator info (e.g. "i" and "?") */
+
+/* Common style for "i" and "?" */
+
+.sk-estimator-doc-link,
+a:link.sk-estimator-doc-link,
+a:visited.sk-estimator-doc-link {
+  float: right;
+  font-size: smaller;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1em;
+  height: 1em;
+  width: 1em;
+  text-decoration: none !important;
+  margin-left: 0.5em;
+  text-align: center;
+  /* unfitted */
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+  color: var(--sklearn-color-unfitted-level-1);
+}
+
+.sk-estimator-doc-link.fitted,
+a:link.sk-estimator-doc-link.fitted,
+a:visited.sk-estimator-doc-link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+div.sk-estimator:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover,
+div.sk-label-container:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+div.sk-estimator.fitted:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover,
+div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+/* Span, style for the box shown on hovering the info icon */
+.sk-estimator-doc-link span {
+  display: none;
+  z-index: 9999;
+  position: relative;
+  font-weight: normal;
+  right: .2ex;
+  padding: .5ex;
+  margin: .5ex;
+  width: min-content;
+  min-width: 20ex;
+  max-width: 50ex;
+  color: var(--sklearn-color-text);
+  box-shadow: 2pt 2pt 4pt #999;
+  /* unfitted */
+  background: var(--sklearn-color-unfitted-level-0);
+  border: .5pt solid var(--sklearn-color-unfitted-level-3);
+}
+
+.sk-estimator-doc-link.fitted span {
+  /* fitted */
+  background: var(--sklearn-color-fitted-level-0);
+  border: var(--sklearn-color-fitted-level-3);
+}
+
+.sk-estimator-doc-link:hover span {
+  display: block;
+}
+
+/* "?"-specific style due to the `<a>` HTML tag */
+
+#sk-container-id-3 a.estimator_doc_link {
+  float: right;
+  font-size: 1rem;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+  text-decoration: none;
+  /* unfitted */
+  color: var(--sklearn-color-unfitted-level-1);
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+}
+
+#sk-container-id-3 a.estimator_doc_link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+#sk-container-id-3 a.estimator_doc_link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+#sk-container-id-3 a.estimator_doc_link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+}
+</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>ColumnTransformer(transformers=[(&#x27;pipeline-1&#x27;,
+                                 Pipeline(steps=[(&#x27;simpleimputer&#x27;,
+                                                  SimpleImputer(strategy=&#x27;median&#x27;)),
+                                                 (&#x27;standardscaler&#x27;,
+                                                  StandardScaler())]),
+                                 [&#x27;age&#x27;, &#x27;eat_out_freq&#x27;, &#x27;n_people&#x27;, &#x27;price&#x27;]),
+                                (&#x27;pipeline-2&#x27;,
+                                 Pipeline(steps=[(&#x27;simpleimputer&#x27;,
+                                                  SimpleImputer(strategy=&#x27;most_frequent&#x27;)),
+                                                 (&#x27;onehotencoder&#x27;,
+                                                  OneHotEncoder(drop=&#x27;if_binary&#x27;))]),
+                                 [&#x27;good_server&#x27;])...
+                                                 (&#x27;ordinalencoder&#x27;,
+                                                  OrdinalEncoder(categories=[[&#x27;no &#x27;
+                                                                              &#x27;music&#x27;,
+                                                                              &#x27;low&#x27;,
+                                                                              &#x27;medium&#x27;,
+                                                                              &#x27;high&#x27;,
+                                                                              &#x27;crazy &#x27;
+                                                                              &#x27;loud&#x27;]]))]),
+                                 [&#x27;noise_level&#x27;]),
+                                (&#x27;pipeline-4&#x27;,
+                                 Pipeline(steps=[(&#x27;simpleimputer&#x27;,
+                                                  SimpleImputer(strategy=&#x27;most_frequent&#x27;)),
+                                                 (&#x27;onehotencoder&#x27;,
+                                                  OneHotEncoder(handle_unknown=&#x27;ignore&#x27;,
+                                                                sparse_output=False))]),
+                                 [&#x27;food_type&#x27;]),
+                                (&#x27;drop&#x27;, &#x27;drop&#x27;,
+                                 [&#x27;comments&#x27;, &#x27;north_america&#x27;,
+                                  &#x27;restaurant_name&#x27;])])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-17" type="checkbox" ><label for="sk-estimator-id-17" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>ColumnTransformer</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.compose.ColumnTransformer.html">?<span>Documentation for ColumnTransformer</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>ColumnTransformer(transformers=[(&#x27;pipeline-1&#x27;,
+                                 Pipeline(steps=[(&#x27;simpleimputer&#x27;,
+                                                  SimpleImputer(strategy=&#x27;median&#x27;)),
+                                                 (&#x27;standardscaler&#x27;,
+                                                  StandardScaler())]),
+                                 [&#x27;age&#x27;, &#x27;eat_out_freq&#x27;, &#x27;n_people&#x27;, &#x27;price&#x27;]),
+                                (&#x27;pipeline-2&#x27;,
+                                 Pipeline(steps=[(&#x27;simpleimputer&#x27;,
+                                                  SimpleImputer(strategy=&#x27;most_frequent&#x27;)),
+                                                 (&#x27;onehotencoder&#x27;,
+                                                  OneHotEncoder(drop=&#x27;if_binary&#x27;))]),
+                                 [&#x27;good_server&#x27;])...
+                                                 (&#x27;ordinalencoder&#x27;,
+                                                  OrdinalEncoder(categories=[[&#x27;no &#x27;
+                                                                              &#x27;music&#x27;,
+                                                                              &#x27;low&#x27;,
+                                                                              &#x27;medium&#x27;,
+                                                                              &#x27;high&#x27;,
+                                                                              &#x27;crazy &#x27;
+                                                                              &#x27;loud&#x27;]]))]),
+                                 [&#x27;noise_level&#x27;]),
+                                (&#x27;pipeline-4&#x27;,
+                                 Pipeline(steps=[(&#x27;simpleimputer&#x27;,
+                                                  SimpleImputer(strategy=&#x27;most_frequent&#x27;)),
+                                                 (&#x27;onehotencoder&#x27;,
+                                                  OneHotEncoder(handle_unknown=&#x27;ignore&#x27;,
+                                                                sparse_output=False))]),
+                                 [&#x27;food_type&#x27;]),
+                                (&#x27;drop&#x27;, &#x27;drop&#x27;,
+                                 [&#x27;comments&#x27;, &#x27;north_america&#x27;,
+                                  &#x27;restaurant_name&#x27;])])</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-18" type="checkbox" ><label for="sk-estimator-id-18" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>pipeline-1</div></div></label><div class="sk-toggleable__content fitted"><pre>[&#x27;age&#x27;, &#x27;eat_out_freq&#x27;, &#x27;n_people&#x27;, &#x27;price&#x27;]</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-19" type="checkbox" ><label for="sk-estimator-id-19" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>SimpleImputer</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.impute.SimpleImputer.html">?<span>Documentation for SimpleImputer</span></a></div></label><div class="sk-toggleable__content fitted"><pre>SimpleImputer(strategy=&#x27;median&#x27;)</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-20" type="checkbox" ><label for="sk-estimator-id-20" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>StandardScaler</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.StandardScaler.html">?<span>Documentation for StandardScaler</span></a></div></label><div class="sk-toggleable__content fitted"><pre>StandardScaler()</pre></div> </div></div></div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-21" type="checkbox" ><label for="sk-estimator-id-21" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>pipeline-2</div></div></label><div class="sk-toggleable__content fitted"><pre>[&#x27;good_server&#x27;]</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-22" type="checkbox" ><label for="sk-estimator-id-22" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>SimpleImputer</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.impute.SimpleImputer.html">?<span>Documentation for SimpleImputer</span></a></div></label><div class="sk-toggleable__content fitted"><pre>SimpleImputer(strategy=&#x27;most_frequent&#x27;)</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-23" type="checkbox" ><label for="sk-estimator-id-23" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>OneHotEncoder</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.OneHotEncoder.html">?<span>Documentation for OneHotEncoder</span></a></div></label><div class="sk-toggleable__content fitted"><pre>OneHotEncoder(drop=&#x27;if_binary&#x27;)</pre></div> </div></div></div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-24" type="checkbox" ><label for="sk-estimator-id-24" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>pipeline-3</div></div></label><div class="sk-toggleable__content fitted"><pre>[&#x27;noise_level&#x27;]</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-25" type="checkbox" ><label for="sk-estimator-id-25" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>SimpleImputer</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.impute.SimpleImputer.html">?<span>Documentation for SimpleImputer</span></a></div></label><div class="sk-toggleable__content fitted"><pre>SimpleImputer(strategy=&#x27;most_frequent&#x27;)</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-26" type="checkbox" ><label for="sk-estimator-id-26" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>OrdinalEncoder</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.OrdinalEncoder.html">?<span>Documentation for OrdinalEncoder</span></a></div></label><div class="sk-toggleable__content fitted"><pre>OrdinalEncoder(categories=[[&#x27;no music&#x27;, &#x27;low&#x27;, &#x27;medium&#x27;, &#x27;high&#x27;, &#x27;crazy loud&#x27;]])</pre></div> </div></div></div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-27" type="checkbox" ><label for="sk-estimator-id-27" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>pipeline-4</div></div></label><div class="sk-toggleable__content fitted"><pre>[&#x27;food_type&#x27;]</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-28" type="checkbox" ><label for="sk-estimator-id-28" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>SimpleImputer</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.impute.SimpleImputer.html">?<span>Documentation for SimpleImputer</span></a></div></label><div class="sk-toggleable__content fitted"><pre>SimpleImputer(strategy=&#x27;most_frequent&#x27;)</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-29" type="checkbox" ><label for="sk-estimator-id-29" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>OneHotEncoder</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.OneHotEncoder.html">?<span>Documentation for OneHotEncoder</span></a></div></label><div class="sk-toggleable__content fitted"><pre>OneHotEncoder(handle_unknown=&#x27;ignore&#x27;, sparse_output=False)</pre></div> </div></div></div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-30" type="checkbox" ><label for="sk-estimator-id-30" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>drop</div></div></label><div class="sk-toggleable__content fitted"><pre>[&#x27;comments&#x27;, &#x27;north_america&#x27;, &#x27;restaurant_name&#x27;]</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-31" type="checkbox" ><label for="sk-estimator-id-31" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>drop</div></div></label><div class="sk-toggleable__content fitted"><pre>drop</pre></div> </div></div></div></div></div></div></div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2435,14 +3354,48 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeric_feats</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ohe_feat_names</span> <span class="o">=</span> <span class="n">preprocessor</span><span class="o">.</span><span class="n">named_transformers_</span><span class="p">[</span><span class="s2">&quot;pipeline-4&quot;</span><span class="p">][</span><span class="s2">&quot;onehotencoder&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">(</span><span class="n">categorical_feats</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">ohe_feat_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;food_type_Canadian/American&#39;,
+ &#39;food_type_Chinese&#39;,
+ &#39;food_type_Fusion&#39;,
+ &#39;food_type_Indian&#39;,
+ &#39;food_type_Italian&#39;,
+ &#39;food_type_Mexican&#39;,
+ &#39;food_type_Other&#39;,
+ &#39;food_type_Quebecois&#39;,
+ &#39;food_type_Thai&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feat_names</span> <span class="o">=</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feat_names</span> <span class="o">=</span> <span class="n">numeric_feats</span> <span class="o">+</span> <span class="n">binary_feats</span> <span class="o">+</span> <span class="n">ordinal_feats</span> <span class="o">+</span> <span class="n">ohe_feat_names</span>
+<span class="n">feat_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;age&#39;,
+ &#39;eat_out_freq&#39;,
+ &#39;n_people&#39;,
+ &#39;price&#39;,
+ &#39;good_server&#39;,
+ &#39;noise_level&#39;,
+ &#39;food_type_Canadian/American&#39;,
+ &#39;food_type_Chinese&#39;,
+ &#39;food_type_Fusion&#39;,
+ &#39;food_type_Indian&#39;,
+ &#39;food_type_Italian&#39;,
+ &#39;food_type_Mexican&#39;,
+ &#39;food_type_Other&#39;,
+ &#39;food_type_Quebecois&#39;,
+ &#39;food_type_Thai&#39;]
 </pre></div>
 </div>
 </div>
@@ -2453,6 +3406,23 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.66941678, -0.25498295,  0.31029469, ...,  0.        ,
+         0.        ,  0.        ],
+       [-0.66941678,  0.6507517 ,  0.31029469, ...,  0.        ,
+         0.        ,  0.        ],
+       [-0.89515383,  0.6507517 ,  0.82336432, ...,  0.        ,
+         0.        ,  0.        ],
+       ...,
+       [-0.89515383,  0.6507517 , -0.97237936, ...,  0.        ,
+         0.        ,  0.        ],
+       [-0.89515383,  1.10361902, -0.20277493, ...,  1.        ,
+         0.        ,  0.        ],
+       [-0.89515383,  0.6507517 ,  1.33643394, ...,  0.        ,
+         0.        ,  0.        ]], shape=(753, 15))
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2460,11 +3430,262 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>eat_out_freq</th>
+      <th>n_people</th>
+      <th>price</th>
+      <th>good_server</th>
+      <th>noise_level</th>
+      <th>food_type_Canadian/American</th>
+      <th>food_type_Chinese</th>
+      <th>food_type_Fusion</th>
+      <th>food_type_Indian</th>
+      <th>food_type_Italian</th>
+      <th>food_type_Mexican</th>
+      <th>food_type_Other</th>
+      <th>food_type_Quebecois</th>
+      <th>food_type_Thai</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.669417</td>
+      <td>-0.254983</td>
+      <td>0.310295</td>
+      <td>-0.368406</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-0.669417</td>
+      <td>0.650752</td>
+      <td>0.310295</td>
+      <td>-0.054225</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.895154</td>
+      <td>0.650752</td>
+      <td>0.823364</td>
+      <td>-0.250588</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-0.669417</td>
+      <td>1.103619</td>
+      <td>-0.202775</td>
+      <td>-0.250588</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.007794</td>
+      <td>-0.254983</td>
+      <td>-0.202775</td>
+      <td>-0.054225</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>748</th>
+      <td>0.685006</td>
+      <td>0.197884</td>
+      <td>-0.715845</td>
+      <td>-0.643315</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>749</th>
+      <td>0.007794</td>
+      <td>-0.707850</td>
+      <td>-0.613231</td>
+      <td>-0.918224</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>750</th>
+      <td>-0.895154</td>
+      <td>0.650752</td>
+      <td>-0.972379</td>
+      <td>-0.643315</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>751</th>
+      <td>-0.895154</td>
+      <td>1.103619</td>
+      <td>-0.202775</td>
+      <td>-0.250588</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>752</th>
+      <td>-0.895154</td>
+      <td>0.650752</td>
+      <td>1.336434</td>
+      <td>-0.054225</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>753 rows × 15 columns</p>
+</div></div></div>
 </div>
 <p>We have new columns for the categorical features. Let’s create a pipeline with the preprocessor and SVC.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+
+<span class="n">pipe_svc</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">preprocessor</span><span class="p">,</span>
+    <span class="n">SVC</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">cross_val_score</span><span class="p">(</span><span class="n">pipe_svc</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.6759470198675496)
 </pre></div>
 </div>
 </div>
@@ -2481,6 +3702,185 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>north_america</th>
+      <th>eat_out_freq</th>
+      <th>age</th>
+      <th>n_people</th>
+      <th>price</th>
+      <th>food_type</th>
+      <th>noise_level</th>
+      <th>good_server</th>
+      <th>comments</th>
+      <th>restaurant_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>80</th>
+      <td>No</td>
+      <td>2.0</td>
+      <td>21</td>
+      <td>30.0</td>
+      <td>2200.0</td>
+      <td>Chinese</td>
+      <td>high</td>
+      <td>No</td>
+      <td>The environment was very not clean. The food tasted awful.</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>934</th>
+      <td>Yes</td>
+      <td>4.0</td>
+      <td>21</td>
+      <td>30.0</td>
+      <td>3000.0</td>
+      <td>Canadian/American</td>
+      <td>low</td>
+      <td>Yes</td>
+      <td>The building and the room gave a very comfy feeling. Immediately after sitting down it felt like we were right at home.</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>911</th>
+      <td>No</td>
+      <td>4.0</td>
+      <td>20</td>
+      <td>40.0</td>
+      <td>2500.0</td>
+      <td>Canadian/American</td>
+      <td>medium</td>
+      <td>Yes</td>
+      <td>I was hungry</td>
+      <td>Chambar</td>
+    </tr>
+    <tr>
+      <th>459</th>
+      <td>Yes</td>
+      <td>5.0</td>
+      <td>21</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Quebecois</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>Yes</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>20.0</td>
+      <td>3000.0</td>
+      <td>Indian</td>
+      <td>high</td>
+      <td>Yes</td>
+      <td>bad taste</td>
+      <td>east is east</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>No</td>
+      <td>3.0</td>
+      <td>27</td>
+      <td>10.0</td>
+      <td>1500.0</td>
+      <td>Chinese</td>
+      <td>medium</td>
+      <td>Yes</td>
+      <td>Food wasn't great.</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>333</th>
+      <td>No</td>
+      <td>1.0</td>
+      <td>24</td>
+      <td>12.0</td>
+      <td>800.0</td>
+      <td>Other</td>
+      <td>medium</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>393</th>
+      <td>Yes</td>
+      <td>4.0</td>
+      <td>20</td>
+      <td>5.0</td>
+      <td>1500.0</td>
+      <td>Canadian/American</td>
+      <td>low</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>376</th>
+      <td>Yes</td>
+      <td>5.0</td>
+      <td>20</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>525</th>
+      <td>Don't want to share</td>
+      <td>4.0</td>
+      <td>20</td>
+      <td>50.0</td>
+      <td>3000.0</td>
+      <td>Chinese</td>
+      <td>high</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>Haidilao</td>
+    </tr>
+  </tbody>
+</table>
+<p>753 rows × 10 columns</p>
+</div></div></div>
 </div>
 <p>Let’s create bag-of-words representation of the <code class="docutils literal notranslate"><span class="pre">comments</span></code> feature. But first we need to impute the rows where there are no comments. There is a small complication if we want to put <code class="docutils literal notranslate"><span class="pre">SimpleImputer</span></code> and <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> in a pipeline.</p>
 <ul class="simple">
@@ -2492,6 +3892,26 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">FunctionTransformer</span>
 <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+<span class="n">reshape_transformer</span> <span class="o">=</span> <span class="n">FunctionTransformer</span><span class="p">(</span><span class="k">lambda</span> <span class="n">X</span><span class="p">:</span> <span class="n">X</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">validate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">text_transform</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;constant&quot;</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="s2">&quot;missing&quot;</span><span class="p">),</span>
+    <span class="n">reshape_transformer</span><span class="p">,</span>
+    <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">max_features</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">stop_words</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">text_pipe</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">text_transform</span><span class="p">,</span>
+    <span class="n">SVC</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">cross_val_score</span><span class="p">(</span><span class="n">text_pipe</span><span class="p">,</span> <span class="n">X_train</span><span class="p">[[</span><span class="s2">&quot;comments&quot;</span><span class="p">]],</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.6453951434878586)
 </pre></div>
 </div>
 </div>
@@ -2503,6 +3923,47 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <li><p>imputation and one-hot encoding with <code class="docutils literal notranslate"><span class="pre">handle_unknown=&quot;ignore&quot;</span></code> on categorical features</p></li>
 <li><p>imputation, reshaping, and bag-of-words transformation on the text feature</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drop_feats</span>
+
+<span class="n">drop_feats_new</span> <span class="o">=</span> <span class="n">drop_feats</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">drop_feats_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;north_america&#39;, &#39;restaurant_name&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">preprocessor</span> <span class="o">=</span> <span class="n">make_column_transformer</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">numeric_transformer</span><span class="p">,</span> <span class="n">numeric_feats</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">binary_transformer</span><span class="p">,</span> <span class="n">binary_feats</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">ordinal_transformer</span><span class="p">,</span> <span class="n">ordinal_feats</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">categorical_transformer</span><span class="p">,</span> <span class="n">categorical_feats</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">text_transform</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;comments&quot;</span><span class="p">]),</span>
+    <span class="p">(</span><span class="s2">&quot;drop&quot;</span><span class="p">,</span> <span class="n">drop_feats_new</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">full_pipe</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">preprocessor</span><span class="p">,</span>
+    <span class="n">SVC</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">cross_val_score</span><span class="p">(</span><span class="n">full_pipe</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.6932538631346579)
+</pre></div>
+</div>
+</div>
+</div>
 <p>Some improvement when we combine all features!</p>
 </section>
 </section>
