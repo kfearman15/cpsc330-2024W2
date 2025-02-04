@@ -382,12 +382,12 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observations">Observations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix">Confusion matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-video">Confusion matrix (video)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-positive-and-negative">What is “positive” and “negative”?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-with-cross-validation">Confusion matrix with cross-validation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-recall-f1-score">Precision, recall, f1 score</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-recall-f1-score-video">Precision, recall, f1 score (video)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-and-recall-toy-example">Precision and recall: toy example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision">Precision</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall">Recall</a></li>
@@ -426,7 +426,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iclicker-exercise-9-2">iClicker Exercise 9.2</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-class-imbalance-video">Dealing with class imbalance [video]</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-class-imbalance-video">Dealing with class imbalance (video)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-imbalance-in-training-sets">Class imbalance in training sets</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addressing-class-imbalance">Addressing class imbalance</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#which-type-of-error-is-more-important">Which type of error is more important?</a></li>
@@ -1094,8 +1094,8 @@ memory usage: 48.7 MB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit_time       0.007438
-score_time     0.001421
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit_time       0.008147
+score_time     0.001299
 test_score     0.998302
 train_score    0.998302
 dtype: float64
@@ -1142,8 +1142,8 @@ Name: proportion, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit_time       0.093407
-score_time     0.003124
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit_time       0.209978
+score_time     0.003361
 test_score     0.999183
 train_score    0.999221
 dtype: float64
@@ -1166,8 +1166,8 @@ $<span class="math notranslate nohighlight">\(\frac{\text{correct predictions}}{
 <p><br><br><br><br></p>
 </section>
 </section>
-<section id="confusion-matrix">
-<h2>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Link to this heading">#</a></h2>
+<section id="confusion-matrix-video">
+<h2>Confusion matrix <a class="reference external" href="https://www.youtube.com/watch?v=ZCuCErW5lI8">(video)</a><a class="headerlink" href="#confusion-matrix-video" title="Link to this heading">#</a></h2>
 <p>One way to get a better understanding of the errors is by looking at</p>
 <ul class="simple">
 <li><p>false positives (type I errors), where the model incorrectly spots examples as fraud</p></li>
@@ -1185,7 +1185,7 @@ $<span class="math notranslate nohighlight">\(\frac{\text{correct predictions}}{
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2553eccdb3e73d56e8988fc6e4746956e1a4fe2237a11111bd40da693808d1d2.png" src="../../_images/2553eccdb3e73d56e8988fc6e4746956e1a4fe2237a11111bd40da693808d1d2.png" />
+<img alt="../../_images/3f09e55f01dde300b3804d694641fbb6f6989b3cf13f17eee401c4da0981f5e3.png" src="../../_images/3f09e55f01dde300b3804d694641fbb6f6989b3cf13f17eee401c4da0981f5e3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1199,7 +1199,7 @@ $<span class="math notranslate nohighlight">\(\frac{\text{correct predictions}}{
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/aba2bd5118843bdd02933524c2b4ed7e659b47af2659308f0085aad38666a51c.png" src="../../_images/aba2bd5118843bdd02933524c2b4ed7e659b47af2659308f0085aad38666a51c.png" />
+<img alt="../../_images/7f82b9f3cc4b658a847991b68a742e5a32f546844a5c1e0ac3ed510f2a7e6803.png" src="../../_images/7f82b9f3cc4b658a847991b68a742e5a32f546844a5c1e0ac3ed510f2a7e6803.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1263,8 +1263,8 @@ $<span class="math notranslate nohighlight">\(\frac{\text{correct predictions}}{
 <p><br><br><br><br></p>
 </section>
 </section>
-<section id="precision-recall-f1-score">
-<h2>Precision, recall, f1 score<a class="headerlink" href="#precision-recall-f1-score" title="Link to this heading">#</a></h2>
+<section id="precision-recall-f1-score-video">
+<h2>Precision, recall, f1 score <a class="reference external" href="https://www.youtube.com/watch?v=XkCTUuoH23c">(video)</a><a class="headerlink" href="#precision-recall-f1-score-video" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>We have been using <code class="docutils literal notranslate"><span class="pre">.score</span></code> to assess our models, which returns accuracy by default.</p></li>
 <li><p>Accuracy is misleading when we have class imbalance.</p></li>
@@ -1322,7 +1322,7 @@ $<span class="math notranslate nohighlight">\(\frac{\text{correct predictions}}{
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2553eccdb3e73d56e8988fc6e4746956e1a4fe2237a11111bd40da693808d1d2.png" src="../../_images/2553eccdb3e73d56e8988fc6e4746956e1a4fe2237a11111bd40da693808d1d2.png" />
+<img alt="../../_images/3f09e55f01dde300b3804d694641fbb6f6989b3cf13f17eee401c4da0981f5e3.png" src="../../_images/3f09e55f01dde300b3804d694641fbb6f6989b3cf13f17eee401c4da0981f5e3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1357,7 +1357,7 @@ $<span class="math notranslate nohighlight">\( recall = \frac{TP}{TP+FN} = \frac
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2553eccdb3e73d56e8988fc6e4746956e1a4fe2237a11111bd40da693808d1d2.png" src="../../_images/2553eccdb3e73d56e8988fc6e4746956e1a4fe2237a11111bd40da693808d1d2.png" />
+<img alt="../../_images/3f09e55f01dde300b3804d694641fbb6f6989b3cf13f17eee401c4da0981f5e3.png" src="../../_images/3f09e55f01dde300b3804d694641fbb6f6989b3cf13f17eee401c4da0981f5e3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1714,8 +1714,8 @@ weighted avg       0.85      0.80      0.78         5
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.147616</td>
-      <td>0.019603</td>
+      <td>0.317005</td>
+      <td>0.025807</td>
       <td>0.999122</td>
       <td>0.999335</td>
       <td>0.700855</td>
@@ -1727,8 +1727,8 @@ weighted avg       0.85      0.80      0.78         5
     </tr>
     <tr>
       <th>1</th>
-      <td>0.147917</td>
-      <td>0.020319</td>
+      <td>0.323612</td>
+      <td>0.015966</td>
       <td>0.999223</td>
       <td>0.999317</td>
       <td>0.735043</td>
@@ -1740,8 +1740,8 @@ weighted avg       0.85      0.80      0.78         5
     </tr>
     <tr>
       <th>2</th>
-      <td>0.157712</td>
-      <td>0.019390</td>
+      <td>0.345835</td>
+      <td>0.016356</td>
       <td>0.999298</td>
       <td>0.999210</td>
       <td>0.754386</td>
@@ -1753,8 +1753,8 @@ weighted avg       0.85      0.80      0.78         5
     </tr>
     <tr>
       <th>3</th>
-      <td>0.162363</td>
-      <td>0.019963</td>
+      <td>0.343676</td>
+      <td>0.022264</td>
       <td>0.999172</td>
       <td>0.999254</td>
       <td>0.697248</td>
@@ -1766,8 +1766,8 @@ weighted avg       0.85      0.80      0.78         5
     </tr>
     <tr>
       <th>4</th>
-      <td>0.130991</td>
-      <td>0.020273</td>
+      <td>0.294157</td>
+      <td>0.029898</td>
       <td>0.999147</td>
       <td>0.999185</td>
       <td>0.696429</td>
@@ -1938,7 +1938,7 @@ weighted avg       0.85      0.80      0.78         5
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ed35b65aad11f74667e4876a20d848f2f895bb14838f9e6c900318b05b9c8148.png" src="../../_images/ed35b65aad11f74667e4876a20d848f2f895bb14838f9e6c900318b05b9c8148.png" />
+<img alt="../../_images/261917f885476ff779a9787a0d91c0b7f83cc0b6e9fb3c06c9a6da63748a1bae.png" src="../../_images/261917f885476ff779a9787a0d91c0b7f83cc0b6e9fb3c06c9a6da63748a1bae.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1977,7 +1977,6 @@ enjoy_the_moment       0.60      0.55      0.57       469
 <h2>❓❓ Questions for you<a class="headerlink" href="#questions-for-you" title="Link to this heading">#</a></h2>
 <section id="iclicker-exercise-9-1">
 <h3>iClicker Exercise 9.1<a class="headerlink" href="#iclicker-exercise-9-1" title="Link to this heading">#</a></h3>
-<p><strong>iClicker cloud join link: https://join.iclicker.com/VYFJ</strong></p>
 <p><strong>Select all of the following statements which are TRUE.</strong></p>
 <ul class="simple">
 <li><p>(A) In medical diagnosis, false positives are more damaging than false negatives (assume “positive” means the person has a disease, “negative” means they don’t).</p></li>
@@ -2187,7 +2186,7 @@ weighted avg       1.00      1.00      1.00     59810
   }
 
   const force = true;
-  const py_version = '3.5.2'.replace('rc', '-rc.').replace('.dev', '-dev.');
+  const py_version = '3.6.2'.replace('rc', '-rc.').replace('.dev', '-dev.');
   const reloading = false;
   const Bokeh = root.Bokeh;
 
@@ -2347,7 +2346,7 @@ weighted avg       1.00      1.00      1.00     59810
     document.body.appendChild(element);
   }
 
-  const js_urls = ["https://cdn.holoviz.org/panel/1.5.0/dist/bundled/reactiveesm/es-module-shims@^1.10.0/dist/es-module-shims.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-3.5.2.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.5.2.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.5.2.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.5.2.min.js", "https://cdn.holoviz.org/panel/1.5.0/dist/panel.min.js"];
+  const js_urls = ["https://cdn.holoviz.org/panel/1.5.5/dist/bundled/reactiveesm/es-module-shims@^1.10.0/dist/es-module-shims.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-3.6.2.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.6.2.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.6.2.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.6.2.min.js", "https://cdn.holoviz.org/panel/1.5.5/dist/panel.min.js"];
   const js_modules = [];
   const js_exports = {};
   const css_urls = [];
@@ -2497,7 +2496,7 @@ if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
             }
             return messages.next().then(processIteratorResult);
           }
-        }) 
+        })
         var sendClosure = (data, metadata, buffers, disposeOnDone) => {
           return comm_promise.then((comm) => {
             comm.send(data, metadata, buffers, disposeOnDone);
@@ -2665,12 +2664,12 @@ if (window.Jupyter !== undefined) {
   } catch(err) {
   }
 }
-</script><div class="output text_html"><div id='d16090ba-97b5-4f9f-9fc4-0d90b8308790'>
-  <div id="b089be4b-c17f-4984-8985-57a0d5c28b9c" data-root-id="d16090ba-97b5-4f9f-9fc4-0d90b8308790" style="display: contents;"></div>
+</script><div class="output text_html"><div id='7b357ca2-9c85-437e-ae36-dfb9a4a6d996'>
+  <div id="a3a00240-e44d-46cb-8464-0fe36c12d492" data-root-id="7b357ca2-9c85-437e-ae36-dfb9a4a6d996" style="display: contents;"></div>
 </div>
 <script type="application/javascript">(function(root) {
-  var docs_json = {"683e3fce-3a6a-400b-8a9e-c077c6dd9fb9":{"version":"3.5.2","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.browser.BrowserInfo","id":"d16090ba-97b5-4f9f-9fc4-0d90b8308790"},{"type":"object","name":"panel.models.comm_manager.CommManager","id":"21857ebe-9f74-4cdc-ae0e-b132f48a504a","attributes":{"plot_id":"d16090ba-97b5-4f9f-9fc4-0d90b8308790","comm_id":"7d86a22fa52a43728d7f7a03ef877468","client_comm_id":"c42cae07d9974e5e98dbfd3192998014"}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"gap","kind":"Any","default":""},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"TemplateEditor1","properties":[{"name":"layout","kind":"Any","default":[]}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"ReactiveESM1"},{"type":"model","name":"JSComponent1"},{"type":"model","name":"ReactComponent1"},{"type":"model","name":"AnyWidgetComponent1"},{"type":"model","name":"request_value1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"_synced","kind":"Any","default":null},{"name":"_request_sync","kind":"Any","default":0}]}]}};
-  var render_items = [{"docid":"683e3fce-3a6a-400b-8a9e-c077c6dd9fb9","roots":{"d16090ba-97b5-4f9f-9fc4-0d90b8308790":"b089be4b-c17f-4984-8985-57a0d5c28b9c"},"root_ids":["d16090ba-97b5-4f9f-9fc4-0d90b8308790"]}];
+  var docs_json = {"43b15124-54cc-49c2-90a1-4b91d65ac9ec":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.browser.BrowserInfo","id":"7b357ca2-9c85-437e-ae36-dfb9a4a6d996"},{"type":"object","name":"panel.models.comm_manager.CommManager","id":"275cae1a-b264-45e5-bb53-5f02b750c778","attributes":{"plot_id":"7b357ca2-9c85-437e-ae36-dfb9a4a6d996","comm_id":"a245942be2994cceba53da89dad92070","client_comm_id":"36a3a5d7662646c59f1907a9f73ff5c2"}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"gap","kind":"Any","default":""},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_rendered","kind":"Any","default":false},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"TemplateEditor1","properties":[{"name":"layout","kind":"Any","default":[]}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"ReactiveESM1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"JSComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"ReactComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"AnyWidgetComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"request_value1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"_synced","kind":"Any","default":null},{"name":"_request_sync","kind":"Any","default":0}]}]}};
+  var render_items = [{"docid":"43b15124-54cc-49c2-90a1-4b91d65ac9ec","roots":{"7b357ca2-9c85-437e-ae36-dfb9a4a6d996":"a3a00240-e44d-46cb-8464-0fe36c12d492"},"root_ids":["7b357ca2-9c85-437e-ae36-dfb9a4a6d996"]}];
   var docs = Object.values(docs_json)
   if (!docs) {
     return
@@ -2734,12 +2733,12 @@ if (window.Jupyter !== undefined) {
       }
     }, 25, root)
   }
-})(window);</script></div><div class="output text_html"><div id='c8958509-9d2b-4f24-a07a-f8ad832798d0'>
-  <div id="af326904-a13d-4ece-a37f-539b54b5e131" data-root-id="c8958509-9d2b-4f24-a07a-f8ad832798d0" style="display: contents;"></div>
+})(window);</script></div><div class="output text_html"><div id='f279e56e-f4ca-4d50-b9c4-f30ed9a8da27'>
+  <div id="d601d245-5dd6-4c90-a10e-66881ffdf445" data-root-id="f279e56e-f4ca-4d50-b9c4-f30ed9a8da27" style="display: contents;"></div>
 </div>
 <script type="application/javascript">(function(root) {
-  var docs_json = {"50edf62d-3ed6-40e3-ab2c-18ab28c55cc2":{"version":"3.5.2","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.layout.Column","id":"c8958509-9d2b-4f24-a07a-f8ad832798d0","attributes":{"name":"Column00123","tags":["embedded"],"stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"type":"object","name":"ImportedStyleSheet","id":"f62cff73-b7d8-4380-8cd3-9e50c1bbddcb","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.0/dist/css/loading.css"}},{"type":"object","name":"ImportedStyleSheet","id":"1b26e33c-9e46-4a3b-86ad-1d2bb0414c9d","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.0/dist/css/listpanel.css"}},{"type":"object","name":"ImportedStyleSheet","id":"89a0eb00-8a9f-4f5e-8d9a-ff6d74ab3de3","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.0/dist/bundled/theme/default.css"}},{"type":"object","name":"ImportedStyleSheet","id":"2d10a672-97ad-4001-a642-049211779db4","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.0/dist/bundled/theme/native.css"}}],"margin":0,"align":"start","children":[{"type":"object","name":"panel.models.layout.Column","id":"2ba32027-460f-4a8d-bc52-4c2dff1edbec","attributes":{"name":"Column00128","stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"f62cff73-b7d8-4380-8cd3-9e50c1bbddcb"},{"id":"1b26e33c-9e46-4a3b-86ad-1d2bb0414c9d"},{"id":"89a0eb00-8a9f-4f5e-8d9a-ff6d74ab3de3"},{"id":"2d10a672-97ad-4001-a642-049211779db4"}],"margin":0,"align":"start","children":[{"type":"object","name":"panel.models.layout.Column","id":"7823347c-261b-444c-88b2-f0266c99a5d6","attributes":{"name":"Column00138","stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"f62cff73-b7d8-4380-8cd3-9e50c1bbddcb"},{"id":"1b26e33c-9e46-4a3b-86ad-1d2bb0414c9d"},{"id":"89a0eb00-8a9f-4f5e-8d9a-ff6d74ab3de3"},{"id":"2d10a672-97ad-4001-a642-049211779db4"}],"margin":0,"align":"start","children":[{"type":"object","name":"Div","id":"604731d7-2e6d-4b83-9e3c-f831fbc42bd1","attributes":{"stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"f62cff73-b7d8-4380-8cd3-9e50c1bbddcb"},{"id":"89a0eb00-8a9f-4f5e-8d9a-ff6d74ab3de3"},{"id":"2d10a672-97ad-4001-a642-049211779db4"}],"margin":[5,0,0,10],"align":"start","text":"<b>0.521</b>"}},{"type":"object","name":"Slider","id":"d6f564e2-592f-41ce-b152-c04a57b8192b","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"type":"object","name":"CustomJS","id":"d2853227-651b-4b6d-8a78-cef6415dd3b2","attributes":{"args":{"type":"map","entries":[["source",{"id":"d6f564e2-592f-41ce-b152-c04a57b8192b"}],["target",{"id":"604731d7-2e6d-4b83-9e3c-f831fbc42bd1"}]]},"code":"\n    var labels = ['<b>0</b>', '<b>0.0521</b>', '<b>0.104</b>', '<b>0.156</b>', '<b>0.208</b>', '<b>0.261</b>', '<b>0.313</b>', '<b>0.365</b>', '<b>0.417</b>', '<b>0.469</b>', '<b>0.521</b>', '<b>0.573</b>', '<b>0.625</b>', '<b>0.677</b>', '<b>0.729</b>', '<b>0.782</b>', '<b>0.834</b>', '<b>0.886</b>', '<b>0.938</b>', '<b>0.99</b>']\n    target.text = labels[source.value]\n    "}},{"type":"object","name":"CustomJS","id":"cc2044ea-2b9f-4bb1-858f-27070d29a775","attributes":{"code":"\nvar state = null\nfor (var root of cb_obj.document.roots()) {\n  if (root.id == '427d8f11-1cc7-40ab-b579-27f6e3c6eb16') {\n    state = root;\n    break;\n  }\n}\nif (!state) { return; }\nstate.set_state(cb_obj, cb_obj.value)\n"}}]]]},"stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"f62cff73-b7d8-4380-8cd3-9e50c1bbddcb"},{"id":"89a0eb00-8a9f-4f5e-8d9a-ff6d74ab3de3"},{"id":"2d10a672-97ad-4001-a642-049211779db4"}],"margin":[0,10,5,10],"align":"start","show_value":false,"tooltips":false,"start":0,"end":19,"value":10}}]}}]}},{"type":"object","name":"Row","id":"cebb332f-8443-41ca-8a66-24bceea661b4","attributes":{"name":"Row00127","stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"f62cff73-b7d8-4380-8cd3-9e50c1bbddcb"},{"id":"1b26e33c-9e46-4a3b-86ad-1d2bb0414c9d"},{"id":"89a0eb00-8a9f-4f5e-8d9a-ff6d74ab3de3"},{"id":"2d10a672-97ad-4001-a642-049211779db4"}],"margin":0,"align":"start","children":[{"type":"object","name":"panel.models.markup.JSON","id":"cad0c055-c17b-4c83-b2fc-dff542f49ee7","attributes":{"stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"f62cff73-b7d8-4380-8cd3-9e50c1bbddcb"},{"type":"object","name":"ImportedStyleSheet","id":"02bf3dad-83a8-4e7b-9294-fdb729b3d106","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.0/dist/css/json.css"}},{"id":"89a0eb00-8a9f-4f5e-8d9a-ff6d74ab3de3"},{"id":"2d10a672-97ad-4001-a642-049211779db4"}],"margin":[5,10],"align":"start","text":"{\"threshold\": 0.5211, \"Precision\": 0.8873, \"recall\": 0.6176}"}}]}}]}},{"type":"object","name":"panel.models.state.State","id":"427d8f11-1cc7-40ab-b579-27f6e3c6eb16","attributes":{"state":{"type":"map","entries":[[19,{"type":"map","entries":[["header","{\"msgid\": \"f02f270a-b4d3-4837-9d7f-2a1583c30420\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.99</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.99, \\\"Precision\\\": 0.8947, \\\"recall\\\": 0.3333}\"}]}"]]}],[18,{"type":"map","entries":[["header","{\"msgid\": \"b10c9094-ebfb-46dd-becb-5f8abc44f5f8\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.938</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.9379, \\\"Precision\\\": 0.8868, \\\"recall\\\": 0.4608}\"}]}"]]}],[17,{"type":"map","entries":[["header","{\"msgid\": \"d9fc5461-6985-4264-ac71-7df951de5fbf\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.886</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.8858, \\\"Precision\\\": 0.8929, \\\"recall\\\": 0.4902}\"}]}"]]}],[16,{"type":"map","entries":[["header","{\"msgid\": \"4281f926-44c4-4e18-947b-70114191ead7\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.834</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.8337, \\\"Precision\\\": 0.9032, \\\"recall\\\": 0.549}\"}]}"]]}],[15,{"type":"map","entries":[["header","{\"msgid\": \"ab6e025a-f365-4aba-832e-e1124bab1b58\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.782</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.7816, \\\"Precision\\\": 0.8906, \\\"recall\\\": 0.5588}\"}]}"]]}],[14,{"type":"map","entries":[["header","{\"msgid\": \"e51416a2-404f-44d9-87fe-486fd461caba\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.729</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.7295, \\\"Precision\\\": 0.8923, \\\"recall\\\": 0.5686}\"}]}"]]}],[13,{"type":"map","entries":[["header","{\"msgid\": \"24117ac4-46e9-41a3-8c2b-94ab2dcc2f4d\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.677</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.6774, \\\"Precision\\\": 0.8955, \\\"recall\\\": 0.5882}\"}]}"]]}],[12,{"type":"map","entries":[["header","{\"msgid\": \"f4d0d342-1c89-4164-bed6-5e1cdf8c913d\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.625</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.6253, \\\"Precision\\\": 0.8841, \\\"recall\\\": 0.598}\"}]}"]]}],[11,{"type":"map","entries":[["header","{\"msgid\": \"9b03c410-bf29-414b-b47b-c87e42607cc3\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.573</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.5732, \\\"Precision\\\": 0.8857, \\\"recall\\\": 0.6078}\"}]}"]]}],[10,{"type":"map","entries":[["header","{\"msgid\": \"fbdbab15-7ab5-4a15-9d33-68cd65893cf0\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.521</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.5211, \\\"Precision\\\": 0.8873, \\\"recall\\\": 0.6176}\"}]}"]]}],[9,{"type":"map","entries":[["header","{\"msgid\": \"b0d1c8c9-cc82-49da-bb24-9655ab8528aa\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.469</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.4689, \\\"Precision\\\": 0.8649, \\\"recall\\\": 0.6275}\"}]}"]]}],[8,{"type":"map","entries":[["header","{\"msgid\": \"1cd028d9-d98b-4c55-8c14-4ce2a54c9fba\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.417</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.4168, \\\"Precision\\\": 0.8533, \\\"recall\\\": 0.6275}\"}]}"]]}],[7,{"type":"map","entries":[["header","{\"msgid\": \"637bdd67-b004-442b-a7ef-4896f374790b\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.365</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.3647, \\\"Precision\\\": 0.8571, \\\"recall\\\": 0.6471}\"}]}"]]}],[6,{"type":"map","entries":[["header","{\"msgid\": \"8c6fc911-4ab6-492e-b10d-a92b29e6e606\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.313</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.3126, \\\"Precision\\\": 0.8023, \\\"recall\\\": 0.6765}\"}]}"]]}],[5,{"type":"map","entries":[["header","{\"msgid\": \"76be9b05-e681-4072-b176-d25a42a2b510\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.261</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.2605, \\\"Precision\\\": 0.7889, \\\"recall\\\": 0.6961}\"}]}"]]}],[4,{"type":"map","entries":[["header","{\"msgid\": \"a36fba03-e178-45d5-8923-8fc87485f527\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.208</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.2084, \\\"Precision\\\": 0.7872, \\\"recall\\\": 0.7255}\"}]}"]]}],[3,{"type":"map","entries":[["header","{\"msgid\": \"588a88b0-7ac1-4f59-ae0d-9a52ef817183\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.156</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.1563, \\\"Precision\\\": 0.7917, \\\"recall\\\": 0.7451}\"}]}"]]}],[2,{"type":"map","entries":[["header","{\"msgid\": \"7d52abf8-56fb-4f5f-bf2e-d12d1f3ec12c\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.104</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.1042, \\\"Precision\\\": 0.7778, \\\"recall\\\": 0.7549}\"}]}"]]}],[1,{"type":"map","entries":[["header","{\"msgid\": \"778a9e02-35ab-4e17-a4bf-86c0ae0dd218\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0.0521</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.0521, \\\"Precision\\\": 0.7364, \\\"recall\\\": 0.7941}\"}]}"]]}],[0,{"type":"map","entries":[["header","{\"msgid\": \"91612e49-14b4-416b-ba8d-8ac5ff7a8f0c\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"604731d7-2e6d-4b83-9e3c-f831fbc42bd1\"},\"attr\":\"text\",\"new\":\"<b>0</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"cad0c055-c17b-4c83-b2fc-dff542f49ee7\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.0, \\\"Precision\\\": 0.0017, \\\"recall\\\": 1.0}\"}]}"]]}]]},"widgets":{"type":"map","entries":[["d6f564e2-592f-41ce-b152-c04a57b8192b",0]]},"values":[10]}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"gap","kind":"Any","default":""},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"TemplateEditor1","properties":[{"name":"layout","kind":"Any","default":[]}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"ReactiveESM1"},{"type":"model","name":"JSComponent1"},{"type":"model","name":"ReactComponent1"},{"type":"model","name":"AnyWidgetComponent1"},{"type":"model","name":"request_value1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"_synced","kind":"Any","default":null},{"name":"_request_sync","kind":"Any","default":0}]}]}};
-  var render_items = [{"docid":"50edf62d-3ed6-40e3-ab2c-18ab28c55cc2","roots":{"c8958509-9d2b-4f24-a07a-f8ad832798d0":"af326904-a13d-4ece-a37f-539b54b5e131"},"root_ids":["c8958509-9d2b-4f24-a07a-f8ad832798d0"]}];
+  var docs_json = {"7ffed4ba-4785-4b91-a202-c402c4f61179":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.layout.Column","id":"f279e56e-f4ca-4d50-b9c4-f30ed9a8da27","attributes":{"name":"Column00123","tags":["embedded"],"stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"type":"object","name":"ImportedStyleSheet","id":"4f683b94-e504-4dfb-be9d-063a622a5e0a","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.5/dist/css/loading.css"}},{"type":"object","name":"ImportedStyleSheet","id":"1cd371cc-f5b5-480f-9409-b393352d4ea7","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.5/dist/css/listpanel.css"}},{"type":"object","name":"ImportedStyleSheet","id":"f6375ac2-161b-455d-9b32-221cbe326531","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.5/dist/bundled/theme/default.css"}},{"type":"object","name":"ImportedStyleSheet","id":"20f1b684-55b8-401c-ac04-b9572249ce61","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.5/dist/bundled/theme/native.css"}}],"margin":0,"align":"start","children":[{"type":"object","name":"panel.models.layout.Column","id":"54551680-55bf-41c6-96af-8ec67ca264e3","attributes":{"name":"Column00128","stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"4f683b94-e504-4dfb-be9d-063a622a5e0a"},{"id":"1cd371cc-f5b5-480f-9409-b393352d4ea7"},{"id":"f6375ac2-161b-455d-9b32-221cbe326531"},{"id":"20f1b684-55b8-401c-ac04-b9572249ce61"}],"margin":0,"align":"start","children":[{"type":"object","name":"panel.models.layout.Column","id":"26d9e02c-ad60-430c-9bc3-c654ff9abae6","attributes":{"name":"Column00138","stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"4f683b94-e504-4dfb-be9d-063a622a5e0a"},{"id":"1cd371cc-f5b5-480f-9409-b393352d4ea7"},{"id":"f6375ac2-161b-455d-9b32-221cbe326531"},{"id":"20f1b684-55b8-401c-ac04-b9572249ce61"}],"margin":0,"align":"start","children":[{"type":"object","name":"Div","id":"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa","attributes":{"stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"4f683b94-e504-4dfb-be9d-063a622a5e0a"},{"id":"f6375ac2-161b-455d-9b32-221cbe326531"},{"id":"20f1b684-55b8-401c-ac04-b9572249ce61"}],"margin":[5,0,0,10],"align":"start","text":"<b>0.521</b>"}},{"type":"object","name":"Slider","id":"34047407-a4ed-4cf1-b225-e24d9b992df0","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"type":"object","name":"CustomJS","id":"ec569bd4-141a-4a20-bc44-6b7a59796900","attributes":{"args":{"type":"map","entries":[["source",{"id":"34047407-a4ed-4cf1-b225-e24d9b992df0"}],["target",{"id":"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa"}]]},"code":"\n    var labels = ['<b>0</b>', '<b>0.0521</b>', '<b>0.104</b>', '<b>0.156</b>', '<b>0.208</b>', '<b>0.261</b>', '<b>0.313</b>', '<b>0.365</b>', '<b>0.417</b>', '<b>0.469</b>', '<b>0.521</b>', '<b>0.573</b>', '<b>0.625</b>', '<b>0.677</b>', '<b>0.729</b>', '<b>0.782</b>', '<b>0.834</b>', '<b>0.886</b>', '<b>0.938</b>', '<b>0.99</b>']\n    target.text = labels[source.value]\n    "}},{"type":"object","name":"CustomJS","id":"b23634df-4a66-41ae-b63f-41540f1548c5","attributes":{"code":"\nvar state = null\nfor (var root of cb_obj.document.roots()) {\n  if (root.id == 'd1d9030c-9f8d-46aa-9c3d-f15cb4a44598') {\n    state = root;\n    break;\n  }\n}\nif (!state) { return; }\nstate.set_state(cb_obj, cb_obj.value)\n"}}]]]},"stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"4f683b94-e504-4dfb-be9d-063a622a5e0a"},{"id":"f6375ac2-161b-455d-9b32-221cbe326531"},{"id":"20f1b684-55b8-401c-ac04-b9572249ce61"}],"margin":[0,10,5,10],"align":"start","show_value":false,"tooltips":false,"start":0,"end":19,"value":10}}]}}]}},{"type":"object","name":"Row","id":"1ba54875-78b1-45eb-afa2-8ffe59edf9b4","attributes":{"name":"Row00127","stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"4f683b94-e504-4dfb-be9d-063a622a5e0a"},{"id":"1cd371cc-f5b5-480f-9409-b393352d4ea7"},{"id":"f6375ac2-161b-455d-9b32-221cbe326531"},{"id":"20f1b684-55b8-401c-ac04-b9572249ce61"}],"margin":0,"align":"start","children":[{"type":"object","name":"panel.models.markup.JSON","id":"751148e5-6951-42ba-9cd1-ee7f2acdc9e2","attributes":{"stylesheets":["\n:host(.pn-loading):before, .pn-loading:before {\n  background-color: #c3c3c3;\n  mask-size: auto calc(min(50%, 400px));\n  -webkit-mask-size: auto calc(min(50%, 400px));\n}",{"id":"4f683b94-e504-4dfb-be9d-063a622a5e0a"},{"type":"object","name":"ImportedStyleSheet","id":"62539f90-00ba-426e-87d1-80f4ccac9bc7","attributes":{"url":"https://cdn.holoviz.org/panel/1.5.5/dist/css/json.css"}},{"id":"f6375ac2-161b-455d-9b32-221cbe326531"},{"id":"20f1b684-55b8-401c-ac04-b9572249ce61"}],"margin":[5,10],"align":"start","text":"{\"threshold\": 0.5211, \"Precision\": 0.8873, \"recall\": 0.6176}","theme":"light"}}]}}]}},{"type":"object","name":"panel.models.state.State","id":"d1d9030c-9f8d-46aa-9c3d-f15cb4a44598","attributes":{"state":{"type":"map","entries":[[19,{"type":"map","entries":[["header","{\"msgid\": \"7ead5519-60e1-47e1-9fd9-f5783b2ead26\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.99</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.99, \\\"Precision\\\": 0.8947, \\\"recall\\\": 0.3333}\"}]}"]]}],[18,{"type":"map","entries":[["header","{\"msgid\": \"1639365a-6e4e-46cf-b4e6-6d63864586b9\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.938</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.9379, \\\"Precision\\\": 0.8868, \\\"recall\\\": 0.4608}\"}]}"]]}],[17,{"type":"map","entries":[["header","{\"msgid\": \"038f8e1b-0f76-474e-8782-a966b344138c\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.886</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.8858, \\\"Precision\\\": 0.8929, \\\"recall\\\": 0.4902}\"}]}"]]}],[16,{"type":"map","entries":[["header","{\"msgid\": \"6a3d4d6d-e1b5-45be-9277-e5dff0b2acd0\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.834</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.8337, \\\"Precision\\\": 0.9032, \\\"recall\\\": 0.549}\"}]}"]]}],[15,{"type":"map","entries":[["header","{\"msgid\": \"ecc7827a-4166-4e18-890f-a382d654d017\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.782</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.7816, \\\"Precision\\\": 0.8906, \\\"recall\\\": 0.5588}\"}]}"]]}],[14,{"type":"map","entries":[["header","{\"msgid\": \"bce2399a-c588-4a98-b2d0-57c82b59fa38\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.729</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.7295, \\\"Precision\\\": 0.8923, \\\"recall\\\": 0.5686}\"}]}"]]}],[13,{"type":"map","entries":[["header","{\"msgid\": \"b5817ab2-0da1-43ec-b232-e3a05dd6ecca\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.677</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.6774, \\\"Precision\\\": 0.8955, \\\"recall\\\": 0.5882}\"}]}"]]}],[12,{"type":"map","entries":[["header","{\"msgid\": \"e15ddb83-2cce-448c-88a4-1395ea70c69e\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.625</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.6253, \\\"Precision\\\": 0.8841, \\\"recall\\\": 0.598}\"}]}"]]}],[11,{"type":"map","entries":[["header","{\"msgid\": \"c11b09d4-b49b-42d2-9390-7f8583da018c\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.573</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.5732, \\\"Precision\\\": 0.8857, \\\"recall\\\": 0.6078}\"}]}"]]}],[10,{"type":"map","entries":[["header","{\"msgid\": \"441fbc78-a6e8-47fd-bb27-de3d53e0a35e\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.521</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.5211, \\\"Precision\\\": 0.8873, \\\"recall\\\": 0.6176}\"}]}"]]}],[9,{"type":"map","entries":[["header","{\"msgid\": \"d8e83f00-69ff-42b2-a1ca-8db33ed34755\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.469</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.4689, \\\"Precision\\\": 0.8649, \\\"recall\\\": 0.6275}\"}]}"]]}],[8,{"type":"map","entries":[["header","{\"msgid\": \"ca125765-021d-481c-b376-a5061f76a83f\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.417</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.4168, \\\"Precision\\\": 0.8533, \\\"recall\\\": 0.6275}\"}]}"]]}],[7,{"type":"map","entries":[["header","{\"msgid\": \"9b66eeca-0d6f-4634-aba4-1520b4c28d00\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.365</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.3647, \\\"Precision\\\": 0.8571, \\\"recall\\\": 0.6471}\"}]}"]]}],[6,{"type":"map","entries":[["header","{\"msgid\": \"2c8c3355-84a0-4536-abe4-f0bdc21f3c23\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.313</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.3126, \\\"Precision\\\": 0.8023, \\\"recall\\\": 0.6765}\"}]}"]]}],[5,{"type":"map","entries":[["header","{\"msgid\": \"86e04834-c6ea-4373-b4cc-57f8d664ad68\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.261</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.2605, \\\"Precision\\\": 0.7889, \\\"recall\\\": 0.6961}\"}]}"]]}],[4,{"type":"map","entries":[["header","{\"msgid\": \"3dba659d-68fd-4403-aef1-dc357bfdd8ef\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.208</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.2084, \\\"Precision\\\": 0.7872, \\\"recall\\\": 0.7255}\"}]}"]]}],[3,{"type":"map","entries":[["header","{\"msgid\": \"2ecbbce5-67b6-4135-aa90-0e73bb0ed405\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.156</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.1563, \\\"Precision\\\": 0.7917, \\\"recall\\\": 0.7451}\"}]}"]]}],[2,{"type":"map","entries":[["header","{\"msgid\": \"9032b007-139c-4a6a-b7c8-74eff6371ce5\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.104</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.1042, \\\"Precision\\\": 0.7778, \\\"recall\\\": 0.7549}\"}]}"]]}],[1,{"type":"map","entries":[["header","{\"msgid\": \"5a1f8c25-5fd8-48de-b0f4-e382964edcdd\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0.0521</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.0521, \\\"Precision\\\": 0.7364, \\\"recall\\\": 0.7941}\"}]}"]]}],[0,{"type":"map","entries":[["header","{\"msgid\": \"9f0751b8-4cf7-4dee-ac16-7161c308b637\", \"msgtype\": \"PATCH-DOC\"}"],["metadata","{\"use_buffers\": false}"],["content","{\"events\":[{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"1f1c380e-42a0-43a7-b6d5-2b1faef48aaa\"},\"attr\":\"text\",\"new\":\"<b>0</b>\"},{\"kind\":\"ModelChanged\",\"model\":{\"id\":\"751148e5-6951-42ba-9cd1-ee7f2acdc9e2\"},\"attr\":\"text\",\"new\":\"{\\\"threshold\\\": 0.0, \\\"Precision\\\": 0.0017, \\\"recall\\\": 1.0}\"}]}"]]}]]},"widgets":{"type":"map","entries":[["34047407-a4ed-4cf1-b225-e24d9b992df0",0]]},"values":[10]}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"gap","kind":"Any","default":""},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_rendered","kind":"Any","default":false},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"TemplateEditor1","properties":[{"name":"layout","kind":"Any","default":[]}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"ReactiveESM1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"JSComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"ReactComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"AnyWidgetComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"request_value1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"_synced","kind":"Any","default":null},{"name":"_request_sync","kind":"Any","default":0}]}]}};
+  var render_items = [{"docid":"7ffed4ba-4785-4b91-a202-c402c4f61179","roots":{"f279e56e-f4ca-4d50-b9c4-f30ed9a8da27":"d601d245-5dd6-4c90-a10e-66881ffdf445"},"root_ids":["f279e56e-f4ca-4d50-b9c4-f30ed9a8da27"]}];
   var docs = Object.values(docs_json)
   if (!docs) {
     return
@@ -2854,7 +2853,7 @@ if (window.Jupyter !== undefined) {
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/59852917fce0f2c7c2e30b6ff160005cbdc1c244ff64a670330008daadb8011e.png" src="../../_images/59852917fce0f2c7c2e30b6ff160005cbdc1c244ff64a670330008daadb8011e.png" />
+<img alt="../../_images/0639f51a180f8618848ad06fae77b27db616b2bbdc2c94881389606ddee2f371.png" src="../../_images/0639f51a180f8618848ad06fae77b27db616b2bbdc2c94881389606ddee2f371.png" />
 </div>
 </div>
 <ul class="simple">
@@ -2905,7 +2904,7 @@ if (window.Jupyter !== undefined) {
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0d641cf62895f0e199db9531053c5c7376a9d8b1bf86e852db6c04826ff9e4f8.png" src="../../_images/0d641cf62895f0e199db9531053c5c7376a9d8b1bf86e852db6c04826ff9e4f8.png" />
+<img alt="../../_images/079ee5b4c8cd10ef6f45923e7cd4a9a43f68ce2d825d01bc4e401ce97fc7e32d.png" src="../../_images/079ee5b4c8cd10ef6f45923e7cd4a9a43f68ce2d825d01bc4e401ce97fc7e32d.png" />
 </div>
 </div>
 </section>
@@ -2939,7 +2938,8 @@ if (window.Jupyter !== undefined) {
 <div class="cell_output docutils container">
 <div class="output text_html"><style>#sk-container-id-1 {
   /* Definition of color scheme common for light and dark mode */
-  --sklearn-color-text: black;
+  --sklearn-color-text: #000;
+  --sklearn-color-text-muted: #666;
   --sklearn-color-line: gray;
   /* Definition of color scheme for unfitted estimators */
   --sklearn-color-unfitted-level-0: #fff5e6;
@@ -3084,12 +3084,21 @@ clickable and can be expanded/collapsed.
 /* Toggleable label */
 #sk-container-id-1 label.sk-toggleable__label {
   cursor: pointer;
-  display: block;
+  display: flex;
   width: 100%;
   margin-bottom: 0;
   padding: 0.5em;
   box-sizing: border-box;
   text-align: center;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+#sk-container-id-1 label.sk-toggleable__label .caption {
+  font-size: 0.6rem;
+  font-weight: lighter;
+  color: var(--sklearn-color-text-muted);
 }
 
 #sk-container-id-1 label.sk-toggleable__label-arrow:before {
@@ -3242,7 +3251,8 @@ a:visited.sk-estimator-doc-link {
   height: 1em;
   width: 1em;
   text-decoration: none !important;
-  margin-left: 1ex;
+  margin-left: 0.5em;
+  text-align: center;
   /* unfitted */
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
   color: var(--sklearn-color-unfitted-level-1);
@@ -3341,7 +3351,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;standardscaler&#x27;, StandardScaler()), (&#x27;svc&#x27;, SVC())])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;Pipeline<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.pipeline.Pipeline.html">?<span>Documentation for Pipeline</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>Pipeline(steps=[(&#x27;standardscaler&#x27;, StandardScaler()), (&#x27;svc&#x27;, SVC())])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;StandardScaler<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.StandardScaler.html">?<span>Documentation for StandardScaler</span></a></label><div class="sk-toggleable__content fitted"><pre>StandardScaler()</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;SVC<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.svm.SVC.html">?<span>Documentation for SVC</span></a></label><div class="sk-toggleable__content fitted"><pre>SVC()</pre></div> </div></div></div></div></div></div></div></div>
+</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;standardscaler&#x27;, StandardScaler()), (&#x27;svc&#x27;, SVC())])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>Pipeline</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.pipeline.Pipeline.html">?<span>Documentation for Pipeline</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>Pipeline(steps=[(&#x27;standardscaler&#x27;, StandardScaler()), (&#x27;svc&#x27;, SVC())])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>StandardScaler</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.StandardScaler.html">?<span>Documentation for StandardScaler</span></a></div></label><div class="sk-toggleable__content fitted"><pre>StandardScaler()</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>SVC</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.svm.SVC.html">?<span>Documentation for SVC</span></a></div></label><div class="sk-toggleable__content fitted"><pre>SVC()</pre></div> </div></div></div></div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3353,7 +3363,8 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell_output docutils container">
 <div class="output text_html"><style>#sk-container-id-2 {
   /* Definition of color scheme common for light and dark mode */
-  --sklearn-color-text: black;
+  --sklearn-color-text: #000;
+  --sklearn-color-text-muted: #666;
   --sklearn-color-line: gray;
   /* Definition of color scheme for unfitted estimators */
   --sklearn-color-unfitted-level-0: #fff5e6;
@@ -3498,12 +3509,21 @@ clickable and can be expanded/collapsed.
 /* Toggleable label */
 #sk-container-id-2 label.sk-toggleable__label {
   cursor: pointer;
-  display: block;
+  display: flex;
   width: 100%;
   margin-bottom: 0;
   padding: 0.5em;
   box-sizing: border-box;
   text-align: center;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+#sk-container-id-2 label.sk-toggleable__label .caption {
+  font-size: 0.6rem;
+  font-weight: lighter;
+  color: var(--sklearn-color-text-muted);
 }
 
 #sk-container-id-2 label.sk-toggleable__label-arrow:before {
@@ -3656,7 +3676,8 @@ a:visited.sk-estimator-doc-link {
   height: 1em;
   width: 1em;
   text-decoration: none !important;
-  margin-left: 1ex;
+  margin-left: 0.5em;
+  text-align: center;
   /* unfitted */
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
   color: var(--sklearn-color-unfitted-level-1);
@@ -3756,8 +3777,8 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   background-color: var(--sklearn-color-fitted-level-3);
 }
 </style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;standardscaler&#x27;, StandardScaler()),
-                (&#x27;logisticregression&#x27;, LogisticRegression(max_iter=1000))])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" ><label for="sk-estimator-id-4" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;Pipeline<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.pipeline.Pipeline.html">?<span>Documentation for Pipeline</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>Pipeline(steps=[(&#x27;standardscaler&#x27;, StandardScaler()),
-                (&#x27;logisticregression&#x27;, LogisticRegression(max_iter=1000))])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox" ><label for="sk-estimator-id-5" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;StandardScaler<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.StandardScaler.html">?<span>Documentation for StandardScaler</span></a></label><div class="sk-toggleable__content fitted"><pre>StandardScaler()</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" ><label for="sk-estimator-id-6" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;LogisticRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression(max_iter=1000)</pre></div> </div></div></div></div></div></div></div></div>
+                (&#x27;logisticregression&#x27;, LogisticRegression(max_iter=1000))])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" ><label for="sk-estimator-id-4" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>Pipeline</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.pipeline.Pipeline.html">?<span>Documentation for Pipeline</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>Pipeline(steps=[(&#x27;standardscaler&#x27;, StandardScaler()),
+                (&#x27;logisticregression&#x27;, LogisticRegression(max_iter=1000))])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox" ><label for="sk-estimator-id-5" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>StandardScaler</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.StandardScaler.html">?<span>Documentation for StandardScaler</span></a></div></label><div class="sk-toggleable__content fitted"><pre>StandardScaler()</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" ><label for="sk-estimator-id-6" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LogisticRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a></div></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression(max_iter=1000)</pre></div> </div></div></div></div></div></div></div></div>
 </div>
 <p>How to get precision and recall for different thresholds?</p>
 <ul class="simple">
@@ -3873,7 +3894,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/02dd07f23a305a3ee1b56fb633359c820d24d606b73d3d692dba022b3b1987da.png" src="../../_images/02dd07f23a305a3ee1b56fb633359c820d24d606b73d3d692dba022b3b1987da.png" />
+<img alt="../../_images/3a10c1a4e0292ab28aa3bb4759e0d14cb7e68b31d95be1c6497c7da40e0152ac.png" src="../../_images/3a10c1a4e0292ab28aa3bb4759e0d14cb7e68b31d95be1c6497c7da40e0152ac.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3964,7 +3985,7 @@ $<span class="math notranslate nohighlight">\( TPR = \frac{TP}{TP + FN}\)</span>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/9426ed14d3db876fdf80a246878711efdb40dd991d8eda7b27f3359ba1f23a0f.png" src="../../_images/9426ed14d3db876fdf80a246878711efdb40dd991d8eda7b27f3359ba1f23a0f.png" />
+<img alt="../../_images/3927225adf8fb6b2670fa0b9ef845055732694252e7b3e2653e5145a9dc872c3.png" src="../../_images/3927225adf8fb6b2670fa0b9ef845055732694252e7b3e2653e5145a9dc872c3.png" />
 </div>
 </div>
 <ul class="simple">
@@ -4030,7 +4051,7 @@ $<span class="math notranslate nohighlight">\( TPR = \frac{TP}{TP + FN}\)</span>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ac4f88c1bd4d5958edcfae1dd8fe4f6de2fa5638034319229378e6648d18e884.png" src="../../_images/ac4f88c1bd4d5958edcfae1dd8fe4f6de2fa5638034319229378e6648d18e884.png" />
+<img alt="../../_images/1ed2473728a36ece53025e41e9cc64621ed5e6c64ce0e99bf6bba7a3dd51aa28.png" src="../../_images/1ed2473728a36ece53025e41e9cc64621ed5e6c64ce0e99bf6bba7a3dd51aa28.png" />
 </div>
 </div>
 <section id="area-under-the-curve-auc">
@@ -4076,7 +4097,7 @@ AUC for SVC: 0.938
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/75885bdccd1b4ecac70f7ef0359c85cfd8aeb9754ea4629e14cb732cd728dea7.png" src="../../_images/75885bdccd1b4ecac70f7ef0359c85cfd8aeb9754ea4629e14cb732cd728dea7.png" />
+<img alt="../../_images/6d3ff11658dfce5c6aa0adb1096913aeccaedbd8f51446d077d2cd8bb0edeb61.png" src="../../_images/6d3ff11658dfce5c6aa0adb1096913aeccaedbd8f51446d077d2cd8bb0edeb61.png" />
 </div>
 </div>
 </section>
@@ -4092,8 +4113,8 @@ AUC for SVC: 0.938
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit_time                  0.137339
-score_time                0.032836
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit_time                  0.335649
+score_time                0.049945
 test_accuracy             0.999192
 test_f1                   0.716792
 test_recall               0.601712
@@ -4131,7 +4152,7 @@ dtype: float64
 </section>
 </section>
 <section id="dealing-with-class-imbalance-video">
-<h2>Dealing with class imbalance [<a class="reference external" href="https://www.youtube.com/watch?v=jHaKRCFb6Qw">video</a>]<a class="headerlink" href="#dealing-with-class-imbalance-video" title="Link to this heading">#</a></h2>
+<h2>Dealing with class imbalance <a class="reference external" href="https://www.youtube.com/watch?v=jHaKRCFb6Qw">(video)</a><a class="headerlink" href="#dealing-with-class-imbalance-video" title="Link to this heading">#</a></h2>
 <section id="class-imbalance-in-training-sets">
 <h3>Class imbalance in training sets<a class="headerlink" href="#class-imbalance-in-training-sets" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -4298,7 +4319,7 @@ weighted avg       1.00      1.00      1.00     59810
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2553eccdb3e73d56e8988fc6e4746956e1a4fe2237a11111bd40da693808d1d2.png" src="../../_images/2553eccdb3e73d56e8988fc6e4746956e1a4fe2237a11111bd40da693808d1d2.png" />
+<img alt="../../_images/3f09e55f01dde300b3804d694641fbb6f6989b3cf13f17eee401c4da0981f5e3.png" src="../../_images/3f09e55f01dde300b3804d694641fbb6f6989b3cf13f17eee401c4da0981f5e3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -4331,7 +4352,7 @@ weighted avg       1.00      1.00      1.00     59810
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f3c5635cb7c785f044bfdbc3b52ecbece231324c94aa967fc67999fea41d5e9a.png" src="../../_images/f3c5635cb7c785f044bfdbc3b52ecbece231324c94aa967fc67999fea41d5e9a.png" />
+<img alt="../../_images/5a05e93e738b7e4777538d8583454d208bbf09679f0e74e58dd9bca4af0f3add.png" src="../../_images/5a05e93e738b7e4777538d8583454d208bbf09679f0e74e58dd9bca4af0f3add.png" />
 </div>
 </div>
 <ul class="simple">
@@ -4370,7 +4391,7 @@ If ‘balanced’, class weights will be given by n_samples / (n_classes * np.bi
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2086bee0bbbedc27062d71fd6746027671f507c6f2e26d110f9d5d74cf9d37b7.png" src="../../_images/2086bee0bbbedc27062d71fd6746027671f507c6f2e26d110f9d5d74cf9d37b7.png" />
+<img alt="../../_images/232b594b860794e735c14faa81f7eb1e09995c5871fe7b81e75622ad2d543e82.png" src="../../_images/232b594b860794e735c14faa81f7eb1e09995c5871fe7b81e75622ad2d543e82.png" />
 </div>
 </div>
 <p>We have reduced false negatives but we have many more false positives now …</p>
@@ -4434,13 +4455,13 @@ If ‘balanced’, class weights will be given by n_samples / (n_classes * np.bi
   <tbody>
     <tr>
       <th>fit_time</th>
-      <td>0.134798</td>
-      <td>0.262990</td>
+      <td>0.330942</td>
+      <td>0.640201</td>
     </tr>
     <tr>
       <th>score_time</th>
-      <td>0.033815</td>
-      <td>0.032508</td>
+      <td>0.054616</td>
+      <td>0.046917</td>
     </tr>
     <tr>
       <th>test_accuracy</th>
@@ -4545,9 +4566,14 @@ If ‘balanced’, class weights will be given by n_samples / (n_classes * np.bi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(139554, 29)
-(474, 29)
-[237 237]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">74</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">imblearn</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">imblearn.pipeline</span> <span class="kn">import</span> <span class="n">make_pipeline</span> <span class="k">as</span> <span class="n">make_imb_pipeline</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">imblearn.under_sampling</span> <span class="kn">import</span> <span class="n">RandomUnderSampler</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;imblearn&#39;
 </pre></div>
 </div>
 </div>
@@ -4578,12 +4604,6 @@ If ‘balanced’, class weights will be given by n_samples / (n_classes * np.bi
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original dataset shape Counter({1: 900, 0: 100})
-Resampled dataset shape Counter({0: 100, 1: 100})
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4594,15 +4614,6 @@ Resampled dataset shape Counter({0: 100, 1: 100})
     <span class="n">undersample_pipe</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;roc_auc&quot;</span><span class="p">,</span> <span class="s2">&quot;average_precision&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit_time                  0.017561
-score_time                0.008786
-test_roc_auc              0.968236
-test_average_precision    0.374995
-dtype: float64
 </pre></div>
 </div>
 </div>
@@ -4627,13 +4638,6 @@ dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(139554, 29)
-(278634, 29)
-[139317 139317]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4644,15 +4648,6 @@ dtype: float64
     <span class="n">oversample_pipe</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;roc_auc&quot;</span><span class="p">,</span> <span class="s2">&quot;average_precision&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit_time                  0.759043
-score_time                0.009556
-test_roc_auc              0.962036
-test_average_precision    0.714745
-dtype: float64
 </pre></div>
 </div>
 </div>
@@ -4704,15 +4699,6 @@ dtype: float64
     <span class="n">smote_pipe</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;roc_auc&quot;</span><span class="p">,</span> <span class="s2">&quot;average_precision&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit_time                  0.933275
-score_time                0.005963
-test_roc_auc              0.963097
-test_average_precision    0.735667
-dtype: float64
 </pre></div>
 </div>
 </div>
@@ -5174,7 +5160,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/4a52f8e7e5a716d71151281606127e7d2dd5b73f03f5d0d77aec58791e90294a.png" src="../../_images/4a52f8e7e5a716d71151281606127e7d2dd5b73f03f5d0d77aec58791e90294a.png" />
+<img alt="../../_images/ca3ccad355b21067d8a8292b071779e8d0d46e5f88b6ed251bc1f9aa9ac321ff.png" src="../../_images/ca3ccad355b21067d8a8292b071779e8d0d46e5f88b6ed251bc1f9aa9ac321ff.png" />
 </div>
 </div>
 <p>Let’s examine confusion matrix separately for the two genders we have in the data.</p>
@@ -5371,7 +5357,7 @@ weighted avg       0.92      0.91      0.91      4314
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-       &lt;=50K       0.91      0.71      0.80      6028
+       &lt;=50K       0.91      0.72      0.80      6028
         &gt;50K       0.57      0.85      0.68      2683
 
     accuracy                           0.76      8711
@@ -5399,9 +5385,9 @@ weighted avg       0.81      0.76      0.77      8711
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/18db6b6460d319ffec5be3dc643f6774541715ae80c976f3ba2da9f44c577987.png" src="../../_images/18db6b6460d319ffec5be3dc643f6774541715ae80c976f3ba2da9f44c577987.png" />
-<img alt="../../_images/5be696f5cdc980a0f665164ae5e63d4ffa3096be172e5561b1c47e4d21f928e9.png" src="../../_images/5be696f5cdc980a0f665164ae5e63d4ffa3096be172e5561b1c47e4d21f928e9.png" />
-<img alt="../../_images/d5c8636aac8d02e9ff100355c0ed11c34727fa083f772e4bd1fbd7e2e1f2d69c.png" src="../../_images/d5c8636aac8d02e9ff100355c0ed11c34727fa083f772e4bd1fbd7e2e1f2d69c.png" />
+<img alt="../../_images/f6932cb9a197e731349cc17e853b53df2dfb84930fda5a98fbc531c7117a5a88.png" src="../../_images/f6932cb9a197e731349cc17e853b53df2dfb84930fda5a98fbc531c7117a5a88.png" />
+<img alt="../../_images/4fe26a50b26cd01925470a025f9ddce51d6dc9b341c0498e35258ebc43d800c1.png" src="../../_images/4fe26a50b26cd01925470a025f9ddce51d6dc9b341c0498e35258ebc43d800c1.png" />
+<img alt="../../_images/60c99ca32746e9c7077edbaa27d13747ee001b1028b8fb14275c2217c2de7477.png" src="../../_images/60c99ca32746e9c7077edbaa27d13747ee001b1028b8fb14275c2217c2de7477.png" />
 </div>
 </div>
 <section id="questions-for-group-discussion">
@@ -5553,12 +5539,12 @@ weighted avg       0.81      0.76      0.77      8711
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observations">Observations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix">Confusion matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-video">Confusion matrix (video)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-positive-and-negative">What is “positive” and “negative”?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-with-cross-validation">Confusion matrix with cross-validation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-recall-f1-score">Precision, recall, f1 score</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-recall-f1-score-video">Precision, recall, f1 score (video)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision-and-recall-toy-example">Precision and recall: toy example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precision">Precision</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall">Recall</a></li>
@@ -5597,7 +5583,7 @@ weighted avg       0.81      0.76      0.77      8711
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iclicker-exercise-9-2">iClicker Exercise 9.2</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-class-imbalance-video">Dealing with class imbalance [video]</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-class-imbalance-video">Dealing with class imbalance (video)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-imbalance-in-training-sets">Class imbalance in training sets</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addressing-class-imbalance">Addressing class imbalance</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#which-type-of-error-is-more-important">Which type of error is more important?</a></li>
