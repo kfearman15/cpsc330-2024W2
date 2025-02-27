@@ -430,7 +430,8 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-shapley-additive-explanations-introduction">SHAP  (SHapley Additive exPlanations) introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explaining-a-prediction">Explaining a prediction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-plots">SHAP plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-plots">SHAP plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-sources">Additional sources</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-want-this-information">Why do we want this information?</a></li>
 </ul>
 </li>
@@ -4961,8 +4962,11 @@ Name: 23011, Length: 85, dtype: float64
 <li><p>There is some optimal value of age between scaled age of 1 which gives highest SHAP values for for class “&gt;50K”.</p></li>
 <li><p>Ignore the colour for now. The color corresponds to a second feature (education feature in this case) that may have an interaction effect with the feature we are plotting.</p></li>
 </ul>
-<p><br><br></p>
-<p>Here, we explore SHAP’s TreeExplainer. It also provides explainer for different kinds of models.</p>
+</section>
+<section id="additional-sources">
+<h3>Additional sources<a class="headerlink" href="#additional-sources" title="Link to this heading">#</a></h3>
+<p>Interpreting SHAP values can be tricky at first. If you want to see more examples, I recommend <a class="reference external" href="https://www.aidancooper.co.uk/a-non-technical-guide-to-interpreting-shap-analyses/">this post</a>, especially the regression example (regression may be more intuitive since the SHAP values add/subtract from the final number, which is the output of the model).</p>
+<p>SHAP developers provide different versions that are work best with specific types of models. Here is a summary, for you to explore if interested:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://shap.readthedocs.io/en/latest/">TreeExplainer</a> (supports XGBoost, CatBoost, LightGBM)</p></li>
 <li><p><a class="reference external" href="https://shap.readthedocs.io/en/latest/index.html#shap.DeepExplainer">DeepExplainer</a> (supports deep-learning models)</p></li>
@@ -5112,7 +5116,8 @@ Name: 23011, Length: 85, dtype: float64
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-shapley-additive-explanations-introduction">SHAP  (SHapley Additive exPlanations) introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explaining-a-prediction">Explaining a prediction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-plots">SHAP plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-plots">SHAP plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-sources">Additional sources</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-want-this-information">Why do we want this information?</a></li>
 </ul>
 </li>
