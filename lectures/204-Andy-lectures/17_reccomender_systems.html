@@ -503,7 +503,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d738fe23b0ff3a0bc122b98d961b0e20d3c27e1c16420c68a300472ae4300b94.png" src="../../_images/d738fe23b0ff3a0bc122b98d961b0e20d3c27e1c16420c68a300472ae4300b94.png" />
+<img alt="../../_images/dbd6291245024da91212c1411597755b9778d516fb5d7ab7636b8d1f26574511.png" src="../../_images/dbd6291245024da91212c1411597755b9778d516fb5d7ab7636b8d1f26574511.png" />
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="lecture-17-recommender-systems">
@@ -520,6 +520,8 @@ document.write(`
 <li><p>Describe a common approach to evaluate recommender systems.</p></li>
 <li><p>Implement some baseline approaches to complete the utility matrix.</p></li>
 <li><p>Explain the idea of collaborative filtering.</p></li>
+<li><p>Formulate the rating prediction problem as a supervised machine learning problem.</p></li>
+<li><p>Create a content-based filter given ratings data and item features to predict missing ratings in the utility matrix.</p></li>
 <li><p>Explain some serious consequences of recommendation systems.</p></li>
 </ul>
 </section>
@@ -593,14 +595,14 @@ document.write(`
 <section id="main-approaches">
 <h3>Main approaches<a class="headerlink" href="#main-approaches" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Collaborative filtering</p>
+<li><p><strong>Collaborative filtering</strong> (KNNImputer is a simple version)</p>
 <ul>
 <li><p>“Unsupervised” learning</p></li>
 <li><p>We only have labels <span class="math notranslate nohighlight">\(y_{ij}\)</span> (rating of user <span class="math notranslate nohighlight">\(i\)</span> for item <span class="math notranslate nohighlight">\(j\)</span>).</p></li>
 <li><p>We learn features.</p></li>
 </ul>
 </li>
-<li><p><strong>Content-based recommenders</strong> (today’s focus)</p>
+<li><p><strong>Content-based recommenders</strong> (today’s main focus)</p>
 <ul>
 <li><p>Supervised learning</p></li>
 <li><p>Extract features <span class="math notranslate nohighlight">\(x_i\)</span> of users and/or items and building a model to predict rating <span class="math notranslate nohighlight">\(y_i\)</span> given <span class="math notranslate nohighlight">\(x_i\)</span>.</p></li>
@@ -1348,7 +1350,7 @@ Fraction non-nan ratings: 0.438
 </li>
 <li><p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html"><span class="math notranslate nohighlight">\(k\)</span>-Nearest Neighbours imputation</a></p></li>
 </ol>
-<p>I’ll show you 1. and 5. You’ll explore 2., 3., and 4. in the lab.</p>
+<p>I’ll show you 1 and 5 today.</p>
 <section id="global-average-baseline">
 <h3>Global average baseline<a class="headerlink" href="#global-average-baseline" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -1708,6 +1710,9 @@ KNN imputer valid RMSE: 1.48
 </div>
 </div>
 </div>
+<blockquote>
+<div><p>Training error is zero! Why?</p>
+</div></blockquote>
 <p><strong>Question</strong></p>
 <ul class="simple">
 <li><p>Instead of imputation, what would be the consequences if we replace <code class="docutils literal notranslate"><span class="pre">nan</span></code> with zeros so that we can calculate distances between vectors?</p></li>
@@ -1867,12 +1872,23 @@ KNN imputer valid RMSE: 1.48
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">movie_feats_df</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">Z</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">Z</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12, 6)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 1, 1, 0, 0, 0],
+       [0, 0, 1, 0, 1, 0],
+       [0, 1, 1, 0, 0, 0],
+       [0, 0, 0, 0, 0, 1],
+       [1, 0, 1, 0, 0, 0],
+       [0, 1, 1, 1, 0, 0],
+       [0, 0, 1, 0, 1, 0],
+       [0, 0, 0, 0, 0, 1],
+       [0, 0, 0, 0, 0, 1],
+       [0, 1, 1, 1, 0, 0],
+       [0, 0, 0, 0, 0, 1],
+       [0, 1, 1, 0, 0, 0]])
 </pre></div>
 </div>
 </div>
@@ -2798,6 +2814,7 @@ Name: Lion King, dtype: int64
 </table>
 </div></div></div>
 </div>
+<p>The scores seem to be from 1-5. Are our predictions guaranteed to be?</p>
 </section>
 <section id="completing-the-utility-matrix-with-content-based-filtering">
 <h3>Completing the utility matrix with content-based filtering<a class="headerlink" href="#completing-the-utility-matrix-with-content-based-filtering" title="Link to this heading">#</a></h3>
