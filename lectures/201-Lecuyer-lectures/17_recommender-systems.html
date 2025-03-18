@@ -385,7 +385,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-outcomes">Learning outcomes <a name="lo"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-you">❓❓ Questions for you</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-you-https-join-iclicker-com-fuyi">❓❓ Questions for you https://join.iclicker.com/FUYI</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommender-systems-intro-and-motivation">Recommender systems intro and motivation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-recommender-system">What is a recommender system?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-should-we-care-about-recommendation-systems">Why should we care about recommendation systems?</a></li>
@@ -403,7 +403,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-imputation"><span class="math notranslate nohighlight">\(k\)</span>-nearest neighbours imputation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-you">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-17-1-select-all-of-the-following-statements-which-are-true-https-join-iclicker-com-fuyi">Exercise 17.1 Select all of the following statements which are <strong>True</strong> (https://join.iclicker.com/FUYI)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-class-discussion">Questions for class discussion</a></li>
 </ul>
@@ -416,7 +416,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-comments-on-content-based-filtering">Miscellaneous comments on content-based filtering</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-17-2-select-all-of-the-following-statements-which-are-true-https-join-iclicker-com-fuyi">Exercise 17.2 Select all of the following statements which are <strong>True</strong> (https://join.iclicker.com/FUYI)</a></li>
 </ul>
 </li>
@@ -424,7 +424,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-comments-and-summary">Final comments and summary</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formulating-the-problem-of-recommender-systems">Formulating the problem of recommender systems</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-did-we-cover">What did we cover?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Evaluation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Evaluation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reminder">Reminder</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
@@ -494,8 +494,8 @@ document.write(`
 </ul>
 <p><br><br></p>
 </section>
-<section id="questions-for-you">
-<h2>❓❓ Questions for you<a class="headerlink" href="#questions-for-you" title="Link to this heading">#</a></h2>
+<section id="questions-for-you-https-join-iclicker-com-fuyi">
+<h2>❓❓ Questions for you https://join.iclicker.com/FUYI<a class="headerlink" href="#questions-for-you-https-join-iclicker-com-fuyi" title="Link to this heading">#</a></h2>
 <p>What percentage of watch time on YouTube do you think comes from recommendations?</p>
 <ul class="simple">
 <li><p>(A) 50%</p></li>
@@ -1613,7 +1613,7 @@ Global average valid RMSE: 0.83
 <p><img alt="" src="../../_images/utility_matrix.png" /></p>
 <!-- <img src="img/utility_matrix.png" alt="" height="900" width="900">  --><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">train_mat</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">train_mat</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1640,14 +1640,6 @@ Global average valid RMSE: 0.83
       <th>1</th>
       <th>2</th>
       <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-      <th>10</th>
-      <th>11</th>
     </tr>
   </thead>
   <tbody>
@@ -1657,58 +1649,82 @@ Global average valid RMSE: 0.83
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>4.0</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2.0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>4.0</td>
-      <td>5.0</td>
       <td>NaN</td>
-      <td>5.0</td>
-      <td>2.0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>NaN</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>3.0</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
       <td>NaN</td>
       <td>NaN</td>
+      <td>2.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.0</td>
       <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
       <td>1.0</td>
       <td>NaN</td>
+      <td>5.0</td>
       <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>5.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
       <td>NaN</td>
+      <td>5.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
       <td>NaN</td>
     </tr>
   </tbody>
@@ -1720,14 +1736,14 @@ Global average valid RMSE: 0.83
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.impute</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNNImputer</span>
 
 <span class="n">imputer</span> <span class="o">=</span> <span class="n">KNNImputer</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">keep_empty_features</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">train_mat_imp</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">train_mat</span><span class="p">)</span>
+<span class="n">train_mat_imp</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">train_mat</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">train_mat_imp</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">train_mat_imp</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1767,63 +1783,63 @@ Global average valid RMSE: 0.83
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.0</td>
-      <td>4.0</td>
       <td>3.0</td>
-      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
       <td>4.0</td>
       <td>1.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
+      <td>1.5</td>
+      <td>3.5</td>
       <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
+      <td>3.0</td>
+      <td>3.5</td>
       <td>2.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.0</td>
       <td>4.0</td>
-      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>3.5</td>
+      <td>3.5</td>
       <td>2.0</td>
       <td>4.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
       <td>5.0</td>
-      <td>5.0</td>
+      <td>4.0</td>
       <td>5.0</td>
       <td>2.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.0</td>
+      <td>3.5</td>
       <td>4.0</td>
       <td>3.0</td>
       <td>2.0</td>
       <td>4.0</td>
       <td>5.0</td>
       <td>4.0</td>
+      <td>3.0</td>
       <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
       <td>3.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.0</td>
-      <td>4.0</td>
       <td>3.0</td>
       <td>1.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
       <td>5.0</td>
       <td>3.0</td>
+      <td>1.0</td>
     </tr>
   </tbody>
 </table>
@@ -1831,13 +1847,13 @@ Global average valid RMSE: 0.83
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evaluate</span><span class="p">(</span><span class="n">train_mat_imp</span><span class="p">,</span> <span class="n">train_mat</span><span class="p">,</span> <span class="n">valid_mat</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;KNN imputer&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evaluate</span><span class="p">(</span><span class="n">train_mat_imp</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">train_mat</span><span class="p">,</span> <span class="n">valid_mat</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;KNN imputer&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNN imputer train RMSE: 0.00
-KNN imputer valid RMSE: 1.48
+KNN imputer valid RMSE: 2.07
 </pre></div>
 </div>
 </div>
@@ -1962,8 +1978,8 @@ KNN imputer valid RMSE: 1.48
 <p><br><br><br><br></p>
 </section>
 </section>
-<section id="id1">
-<h2>❓❓ Questions for you<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="questions-for-you">
+<h2>❓❓ Questions for you<a class="headerlink" href="#questions-for-you" title="Link to this heading">#</a></h2>
 <section id="exercise-17-1-select-all-of-the-following-statements-which-are-true-https-join-iclicker-com-fuyi">
 <h3>Exercise 17.1 Select all of the following statements which are <strong>True</strong> (https://join.iclicker.com/FUYI)<a class="headerlink" href="#exercise-17-1-select-all-of-the-following-statements-which-are-true-https-join-iclicker-com-fuyi" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -3400,8 +3416,8 @@ Name: Lion King, dtype: int64
 </ul>
 </section>
 </section>
-<section id="id2">
-<h2>❓❓ Questions for you<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h2>❓❓ Questions for you<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <section id="exercise-17-2-select-all-of-the-following-statements-which-are-true-https-join-iclicker-com-fuyi">
 <h3>Exercise 17.2 Select all of the following statements which are <strong>True</strong> (https://join.iclicker.com/FUYI)<a class="headerlink" href="#exercise-17-2-select-all-of-the-following-statements-which-are-true-https-join-iclicker-com-fuyi" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -3464,8 +3480,7 @@ Name: Lion King, dtype: int64
 <p><strong>Social recommendation</strong>:</p>
 <ul class="simple">
 <li><p>What did your friends watch?</p></li>
-<li><p>Many recommenders	are	now	connected to social	networks.</p></li>
-<li><p>“Login using you Facebook	account”.</p></li>
+<li><p>Many recommenders	are	now	connected to social	networks. “Login using you Facebook	account”.</p></li>
 <li><p>Often, people	like similar movies	to their friends.</p></li>
 <li><p>If we get a new user, then recommendations are based on friend’s preferences.</p></li>
 </ul>
@@ -3498,8 +3513,8 @@ Name: Lion King, dtype: int64
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=mRToFXlNBpQ">Part2</a></p></li>
 </ul>
 </section>
-<section id="id3">
-<h3>Evaluation<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h3>Evaluation<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>We split the data similar to supervised systems.</p></li>
 <li><p>We evaluate recommendation systems using traditional regression metrics such as MSE or RMSE.</p></li>
@@ -3577,7 +3592,7 @@ Name: Lion King, dtype: int64
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-outcomes">Learning outcomes <a name="lo"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-you">❓❓ Questions for you</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-you-https-join-iclicker-com-fuyi">❓❓ Questions for you https://join.iclicker.com/FUYI</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommender-systems-intro-and-motivation">Recommender systems intro and motivation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-recommender-system">What is a recommender system?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-should-we-care-about-recommendation-systems">Why should we care about recommendation systems?</a></li>
@@ -3595,7 +3610,7 @@ Name: Lion King, dtype: int64
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbours-imputation"><span class="math notranslate nohighlight">\(k\)</span>-nearest neighbours imputation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-you">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-17-1-select-all-of-the-following-statements-which-are-true-https-join-iclicker-com-fuyi">Exercise 17.1 Select all of the following statements which are <strong>True</strong> (https://join.iclicker.com/FUYI)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-class-discussion">Questions for class discussion</a></li>
 </ul>
@@ -3608,7 +3623,7 @@ Name: Lion King, dtype: int64
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-comments-on-content-based-filtering">Miscellaneous comments on content-based filtering</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">❓❓ Questions for you</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-17-2-select-all-of-the-following-statements-which-are-true-https-join-iclicker-com-fuyi">Exercise 17.2 Select all of the following statements which are <strong>True</strong> (https://join.iclicker.com/FUYI)</a></li>
 </ul>
 </li>
@@ -3616,7 +3631,7 @@ Name: Lion King, dtype: int64
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-comments-and-summary">Final comments and summary</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formulating-the-problem-of-recommender-systems">Formulating the problem of recommender systems</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-did-we-cover">What did we cover?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Evaluation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Evaluation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reminder">Reminder</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
